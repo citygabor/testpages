@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Keyboard shortcuts in Excel - </title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script>
+      // Add event listener to receive messages from the parent window
+      window.addEventListener("message", function (event) {
+          // Check if the event data is a filter value
+          if (event.data && typeof event.data === "string") {
+              var filter = event.data.toUpperCase();
+
+              // Get all tables in this document
+              var tables = document.getElementsByTagName("table");
+
+              // Loop through each table
+              for (var i = 0; i < tables.length; i++) {
+                  var table = tables[i];
+                  var rows = table.getElementsByTagName("tr");
+
+                  // Initialize a variable to track whether to display the table
+                  var displayTable = false;
+
+                  // Loop through each row
+                  for (var j = 0; j < rows.length; j++) {
+                      var row = rows[j];
+                      var cells = row.getElementsByTagName("td");
+
+                      // Initialize a variable to track whether to display the row
+                      var displayRow = false;
+
+                      // Loop through each cell in the row
+                      for (var k = 0; k < cells.length; k++) {
+                          var cell = cells[k];
+                          var cellText = cell.textContent || cell.innerText;
+
+                          // Check if the cell text contains the filter text
+                          if (cellText.toUpperCase().indexOf(filter) > -1) {
+                              displayRow = true;
+                              displayTable = true;
+                              break;
+                          }
+                      }
+
+                      // Set the row's display style based on whether to show or hide it
+                      row.style.display = displayRow ? "" : "none";
+                  }
+
+                  // Set the table's display style based on whether to show or hide it
+                  table.style.display = displayTable ? "" : "none";
+              }
+          }
+      });
+  </script>
+  </head>
+  <body>
+    <h1 id="keyboard-shortcuts-in-excel">Keyboard shortcuts in Excel</h1>
+<h2 id="in-this-topic">In this topic</h2>
+<h2 id="frequently-used-shortcuts">Frequently used shortcuts</h2>
+<h2 id="ribbon-keyboard-shortcuts">Ribbon keyboard shortcuts</h2>
+<h3 id="use-the-access-keys-for-ribbon-tabs">Use the Access keys for ribbon tabs</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move to the <strong>Tell me</strong> or <strong>Search</strong> field on the ribbon and type a search term for assistance or Help content.</td>
+      <td>Alt+Q, then enter the search term.</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>File menu</strong>.</td>
+      <td>Alt+F</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Home</strong> tab and format text and numbers and use the Find tool.</td>
+      <td>Alt+H</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Insert</strong> tab and insert PivotTables, charts, add-ins, Sparklines, pictures, shapes, headers, or text boxes.</td>
+      <td>Alt+N</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Page Layout</strong> tab and work with themes, page setup, scale, and alignment.</td>
+      <td>Alt+P</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Formulas</strong> tab and insert, trace, and customize functions and calculations.</td>
+      <td>Alt+M</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Data</strong> tab and connect to, sort, filter, analyze, and work with data.</td>
+      <td>Alt+A</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Review</strong> tab and check spelling, add notes and threaded comments, and protect sheets and workbooks.</td>
+      <td>Alt+R</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>View</strong> tab and preview page breaks and layouts, show and hide gridlines and headings, set zoom magnification, manage windows and panes, and view macros.</td>
+      <td>Alt+W</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="work-in-the-ribbon-with-the-keyboard">Work in the ribbon with the keyboard</h3>
+<h2 id="keyboard-shortcuts-for-navigating-in-cells">Keyboard shortcuts for navigating in cells</h2>
+
+<p>| To do this                                                                                                                                                                                          | Press                                                                    |
+|—————————————————————————————————————————————————————————————————–|————————————————————————–|
+| Move to the previous cell in a worksheet or the previous option in a dialog box.                                                                                                                    | Shift+Tab                                                                |
+| Move one cell up in a worksheet.                                                                                                                                                                    | Up arrow key                                                             |
+| Move one cell down in a worksheet.                                                                                                                                                                  | Down arrow key                                                           |
+| Move one cell left in a worksheet.                                                                                                                                                                  | Left arrow key                                                           |
+| Move one cell right in a worksheet.                                                                                                                                                                 | Right arrow key                                                          |
+| Move to the edge of the current data region in a worksheet.                                                                                                                                         | Ctrl+Arrow key                                                           |
+| Enter the <strong>End</strong> mode, move to the next nonblank cell in the same column or row as the active cell, and turn off <strong>End</strong> mode. If the cells are blank, move to the last cell in the row or column. | End, Arrow key                                                           |
+| Move to the last cell on a worksheet, to the lowest used row of the rightmost used column.                                                                                                          | Ctrl+End                                                                 |
+| Extend the selection of cells to the last used cell on the worksheet (lower-right corner).                                                                                                          | Ctrl+Shift+End                                                           |
+| Move to the cell in the upper-left corner of the window when Scroll lock is turned on.                                                                                                              | Home+Scroll lock                                                         |
+| Move to the beginning of a worksheet.                                                                                                                                                               | Ctrl+Home                                                                |
+| Move one screen down in a worksheet.                                                                                                                                                                | Page down                                                                |
+| Move to the next sheet in a workbook.                                                                                                                                                               | Ctrl+Page down                                                           |
+| Move one screen to the right in a worksheet.                                                                                                                                                        | Alt+Page down                                                            |
+| Move one screen up in a worksheet.                                                                                                                                                                  | Page up                                                                  |
+| Move one screen to the left in a worksheet.                                                                                                                                                         | Alt+Page up                                                              |
+| Move to the previous sheet in a workbook.                                                                                                                                                           | Ctrl+Page up                                                             |
+| Move one cell to the right in a worksheet. Or, in a protected worksheet, move between unlocked cells.                                                                                               | Tab key                                                                  |
+| Open the list of validation choices on a cell that has data validation option applied to it.                                                                                                        | Alt+Down arrow key                                                       |
+| Cycle through floating shapes, such as text boxes or images.                                                                                                                                        | Ctrl+Alt+5, then the Tab key repeatedly                                  |
+| Exit the floating shape navigation and return to the normal navigation.                                                                                                                             | Esc                                                                      |
+| Scroll horizontally.                                                                                                                                                                                | Ctrl+Shift, then scroll your mouse wheel up to go left, down to go right |
+| Zoom in.                                                                                                                                                                                            | Ctrl+Alt+Equal sign ( = )                                                |
+|  Zoom out.                                                                                                                                                                                          | Ctrl+Alt+Minus sign (-)                                                  |</p>
+<h2 id="keyboard-shortcuts-for-formatting-cells">Keyboard shortcuts for formatting cells</h2>
+
+<h3 id="keyboard-shortcuts-in-the-paste-special-dialog-box-inexcel-2013">Keyboard shortcuts in the Paste Special dialog box in Excel 2013</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Paste all cell contents and formatting.</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Paste only the formulas as entered in the formula bar.</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>Paste only the values (not the formulas).</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>Paste only the copied formatting.</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>Paste only comments and notes attached to the cell.</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Paste only the data validation settings from copied cells.</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <td>Paste all cell contents and formatting from copied cells.</td>
+      <td>H</td>
+    </tr>
+    <tr>
+      <td>Paste all cell contents without borders.</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>Paste only column widths from copied cells.</td>
+      <td>W</td>
+    </tr>
+    <tr>
+      <td>Paste only formulas and number formats from copied cells.</td>
+      <td>R</td>
+    </tr>
+    <tr>
+      <td>Paste only the values (not formulas) and number formats from copied cells.</td>
+      <td>U</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-making-selections-and-performing-actions">Keyboard shortcuts for making selections and performing actions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Select the entire worksheet.</td>
+      <td>Ctrl+A or Ctrl+Shift+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Select the current and next sheet in a workbook.</td>
+      <td>Ctrl+Shift+Page down</td>
+    </tr>
+    <tr>
+      <td>Select the current and previous sheet in a workbook.</td>
+      <td>Ctrl+Shift+Page up</td>
+    </tr>
+    <tr>
+      <td>Extend the selection of cells by one cell.</td>
+      <td>Shift+Arrow key</td>
+    </tr>
+    <tr>
+      <td>Extend the selection of cells to the last nonblank cell in the same column or row as the active cell, or if the next cell is blank, to the next nonblank cell.</td>
+      <td>Ctrl+Shift+Arrow key</td>
+    </tr>
+    <tr>
+      <td>Turn extend mode on and use the arrow keys to extend a selection. Press again to turn off.</td>
+      <td>F8</td>
+    </tr>
+    <tr>
+      <td>Add a non-adjacent cell or range to a selection of cells by using the arrow keys.</td>
+      <td>Shift+F8</td>
+    </tr>
+    <tr>
+      <td>Start a new line in the same cell.</td>
+      <td>Alt+Enter</td>
+    </tr>
+    <tr>
+      <td>Fill the selected cell range with the current entry.</td>
+      <td>Ctrl+Enter</td>
+    </tr>
+    <tr>
+      <td>Complete a cell entry and select the cell above.</td>
+      <td>Shift+Enter</td>
+    </tr>
+    <tr>
+      <td>Select an entire column in a worksheet.</td>
+      <td>Ctrl+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Select an entire row in a worksheet.</td>
+      <td>Shift+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Select all objects on a worksheet when an object is selected.</td>
+      <td>Ctrl+Shift+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Extend the selection of cells to the beginning of the worksheet.</td>
+      <td>Ctrl+Shift+Home</td>
+    </tr>
+    <tr>
+      <td>Select the current region if the worksheet contains data. Press a second time to select the current region and its summary rows. Press a third time to select the entire worksheet.</td>
+      <td>Ctrl+A or Ctrl+Shift+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Select the current region around the active cell.</td>
+      <td>Ctrl+Shift+Asterisk sign (*)</td>
+    </tr>
+    <tr>
+      <td>Select the first command on the menu when a menu or submenu is visible.</td>
+      <td>Home</td>
+    </tr>
+    <tr>
+      <td>Repeat the last command or action, if possible.</td>
+      <td>Ctrl+Y</td>
+    </tr>
+    <tr>
+      <td>Undo the last action.</td>
+      <td>Ctrl+Z</td>
+    </tr>
+    <tr>
+      <td>Expand grouped rows or columns.</td>
+      <td>While hovering over the collapsed items, press and hold the Shift key and scroll down.</td>
+    </tr>
+    <tr>
+      <td>Collapse grouped rows or columns.</td>
+      <td>While hovering over the expanded items, press and hold the Shift key and scroll up.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-working-with-data-functions-and-the-formula-bar">Keyboard shortcuts for working with data, functions, and the formula bar</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Turn on or off tooltips for checking formulas directly in the formula bar or in the cell you’re editing.</td>
+      <td>Ctrl+Alt+P</td>
+    </tr>
+    <tr>
+      <td>Edit the active cell and put the insertion point at the end of its contents. Or, if editing is turned off for the cell, move the insertion point into the formula bar. If editing a formula, toggle Point mode off or on so you can use the arrow keys to create a reference.</td>
+      <td>F2</td>
+    </tr>
+    <tr>
+      <td>Expand or collapse the formula bar.</td>
+      <td>Ctrl+Shift+U</td>
+    </tr>
+    <tr>
+      <td>Cancel an entry in the cell or formula bar.</td>
+      <td>Esc</td>
+    </tr>
+    <tr>
+      <td>Complete an entry in the formula bar and select the cell below.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the end of the text when in the formula bar.</td>
+      <td>Ctrl+End</td>
+    </tr>
+    <tr>
+      <td>Select all text in the formula bar from the cursor position to the end.</td>
+      <td>Ctrl+Shift+End</td>
+    </tr>
+    <tr>
+      <td>Calculate all worksheets in all open workbooks.</td>
+      <td>F9</td>
+    </tr>
+    <tr>
+      <td>Calculate the active worksheet.</td>
+      <td>Shift+F9</td>
+    </tr>
+    <tr>
+      <td>Calculate all worksheets in all open workbooks, regardless of whether they have changed since the last calculation.</td>
+      <td>Ctrl+Alt+F9</td>
+    </tr>
+    <tr>
+      <td>Check dependent formulas, and then calculate all cells in all open workbooks, including cells not marked as needing to be calculated.</td>
+      <td>Ctrl+Alt+Shift+F9</td>
+    </tr>
+    <tr>
+      <td>Display the menu or message for an <strong>Error Checking</strong> button.</td>
+      <td>Alt+Shift+F10</td>
+    </tr>
+    <tr>
+      <td>Display the <strong>Function Arguments</strong> dialog box when the insertion point is to the right of a function name in a formula.</td>
+      <td>Ctrl+A</td>
+    </tr>
+    <tr>
+      <td>Insert argument names and parentheses when the insertion point is to the right of a function name in a formula.</td>
+      <td>Ctrl+Shift+A</td>
+    </tr>
+    <tr>
+      <td>Insert the <strong>AutoSum</strong> formula</td>
+      <td>Alt+Equal sign ( = )</td>
+    </tr>
+    <tr>
+      <td>Invoke <a href="/en-gb/office/video-use-autofill-and-flash-fill-2e79a709-c814-4b27-8bc2-c4dc84d49464">Flash Fill</a> to automatically recognize patterns in adjacent columns and fill the current column</td>
+      <td>Ctrl+E</td>
+    </tr>
+    <tr>
+      <td>Cycle through all combinations of absolute and relative references in a formula if a cell reference or range is selected.</td>
+      <td>F4</td>
+    </tr>
+    <tr>
+      <td>Insert a function.</td>
+      <td>Shift+F3</td>
+    </tr>
+    <tr>
+      <td>Copy the value from the cell above the active cell into the cell or the formula bar.</td>
+      <td>Ctrl+Shift+Straight quotation mark (“)</td>
+    </tr>
+    <tr>
+      <td>Create an embedded chart of the data in the current range.</td>
+      <td>Alt+F1</td>
+    </tr>
+    <tr>
+      <td>Create a chart of the data in the current range in a separate <strong>Chart</strong> sheet.</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <td>Define a name to use in references.</td>
+      <td>Alt+M, M, D</td>
+    </tr>
+    <tr>
+      <td>Paste a name from the <strong>Paste Name</strong> dialog box (if names have been defined in the workbook).</td>
+      <td>F3</td>
+    </tr>
+    <tr>
+      <td>Move to the first field in the next record of a data form.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Create, run, edit, or delete a macro.</td>
+      <td>Alt+F8</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Microsoft Visual Basic For Applications Editor</strong>.</td>
+      <td>Alt+F11 </td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Power Query Editor</strong></td>
+      <td>Alt+F12</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-refreshing-external-data">Keyboard shortcuts for refreshing external data</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Stop a refresh operation.</td>
+      <td>Esc</td>
+    </tr>
+    <tr>
+      <td>Refresh data in the current worksheet.</td>
+      <td>Ctrl+F5</td>
+    </tr>
+    <tr>
+      <td>Refresh all data in the workbook.</td>
+      <td>Ctrl+Alt+F5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="power-pivot-keyboard-shortcuts">Power Pivot keyboard shortcuts</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open the context menu for the selected cell, column, or row.</td>
+      <td>Shift+F10</td>
+    </tr>
+    <tr>
+      <td>Select the entire table.</td>
+      <td>Ctrl+A</td>
+    </tr>
+    <tr>
+      <td>Copy selected data.</td>
+      <td>Ctrl+C</td>
+    </tr>
+    <tr>
+      <td>Delete the table.</td>
+      <td>Ctrl+D</td>
+    </tr>
+    <tr>
+      <td>Move the table.</td>
+      <td>Ctrl+M</td>
+    </tr>
+    <tr>
+      <td>Rename the table.</td>
+      <td>Ctrl+R</td>
+    </tr>
+    <tr>
+      <td>Save the file.</td>
+      <td>Ctrl+S</td>
+    </tr>
+    <tr>
+      <td>Redo the last action.</td>
+      <td>Ctrl+Y</td>
+    </tr>
+    <tr>
+      <td>Undo the last action.</td>
+      <td>Ctrl+Z</td>
+    </tr>
+    <tr>
+      <td>Select the current column.</td>
+      <td>Ctrl+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Select the current row.</td>
+      <td>Shift+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Select all cells from the current location to the last cell of the column.</td>
+      <td>Shift+Page down</td>
+    </tr>
+    <tr>
+      <td>Select all cells from the current location to the first cell of the column.</td>
+      <td>Shift+Page up</td>
+    </tr>
+    <tr>
+      <td>Select all cells from the current location to the last cell of the row.</td>
+      <td>Shift+End</td>
+    </tr>
+    <tr>
+      <td>Select all cells from the current location to the first cell of the row.</td>
+      <td>Shift+Home</td>
+    </tr>
+    <tr>
+      <td>Move to the previous table.</td>
+      <td>Ctrl+Page up</td>
+    </tr>
+    <tr>
+      <td>Move to the next table.</td>
+      <td>Ctrl+Page down</td>
+    </tr>
+    <tr>
+      <td>Move to the first cell in the upper-left corner of selected table.</td>
+      <td>Ctrl+Home</td>
+    </tr>
+    <tr>
+      <td>Move to the last cell in the lower-right corner of selected table.</td>
+      <td>Ctrl+End</td>
+    </tr>
+    <tr>
+      <td>Move to the first cell of the selected row.</td>
+      <td>Ctrl+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the last cell of the selected row.</td>
+      <td>Ctrl+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the first cell of the selected column.</td>
+      <td>Ctrl+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the last cell of selected column.</td>
+      <td>Ctrl+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Close a dialog box or cancel a process, such as a paste operation.</td>
+      <td>Ctrl+Esc</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>AutoFilter Menu</strong> dialog box.</td>
+      <td>Alt+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Go To</strong> dialog box.</td>
+      <td>F5</td>
+    </tr>
+    <tr>
+      <td>Recalculate all formulas in the Power Pivot window. For more information, see <a href="/en-gb/office/recalculate-formulas-in-power-pivot-1169df58-70f4-467f-aaa6-5eb25860598e">Recalculate Formulas in Power Pivot</a>.</td>
+      <td>F9</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="function-keys">Function keys</h2>
+
+<h2 id="other-useful-shortcut-keys">Other useful shortcut keys</h2>
+<h2 id="see-also">See also</h2>
+
+<h2 id="in-this-topic-1">In this topic</h2>
+
+<h2 id="frequently-used-shortcuts-1">Frequently used shortcuts</h2>
+
+<h2 id="shortcut-conflicts">Shortcut conflicts</h2>
+
+<h3 id="change-system-preferences-for-keyboard-shortcuts-with-the-mouse">Change system preferences for keyboard shortcuts with the mouse</h3>
+
+<h2 id="work-in-windows-and-dialog-boxes">Work in windows and dialog boxes</h2>
+
+<h2 id="move-and-scroll-in-a-sheet-or-workbook">Move and scroll in a sheet or workbook</h2>
+
+<h2 id="enter-data-on-a-sheet">Enter data on a sheet</h2>
+
+<h2 id="work-in-cells-or-the-formula-bar">Work in cells or the Formula bar</h2>
+
+<h2 id="format-and-edit-data">Format and edit data</h2>
+
+<h2 id="select-cells-columns-or-rows">Select cells, columns, or rows</h2>
+
+<h2 id="work-with-a-selection">Work with a selection</h2>
+<h2 id="use-charts">Use charts</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Insert a new chart sheet. *</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <td>Cycle through chart object selection.</td>
+      <td>Arrow keys</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sort-filter-and-use-pivottable-reports">Sort, filter, and use PivotTable reports</h2>
+
+<h2 id="outline-data">Outline data</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Display or hide outline symbols.</td>
+      <td>Control+8</td>
+    </tr>
+    <tr>
+      <td>Hide selected rows.</td>
+      <td>Control+9</td>
+    </tr>
+    <tr>
+      <td>Unhide selected rows.</td>
+      <td>Control+Shift+Left parenthesis (()</td>
+    </tr>
+    <tr>
+      <td>Hide selected columns.</td>
+      <td>Control+Zero (0)</td>
+    </tr>
+    <tr>
+      <td>Unhide selected columns.</td>
+      <td>Control+Shift+Right parenthesis ())</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="use-function-key-shortcuts">Use function key shortcuts</h2>
+
+<h3 id="change-function-key-preferences-with-the-mouse">Change function key preferences with the mouse</h3>
+
+<h2 id="drawing">Drawing</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Toggle <strong>Drawing</strong> mode on and off.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Control+Z</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="see-also-1">See also</h2>
+
+<h2 id="in-this-topic-2">In this topic</h2>
+<h2 id="navigate-the-worksheet">Navigate the worksheet</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move one cell to the right.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Move one cell up, down, left, or right.</td>
+      <td>Arrow keys</td>
+    </tr>
+    <tr>
+      <td>Move to the next sheet in the workbook.</td>
+      <td>Option+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the previous sheet in the workbook.</td>
+      <td>Option+Left arrow key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="format-and-edit-data-1">Format and edit data</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apply outline border.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Option+0</td>
+    </tr>
+    <tr>
+      <td>Remove outline border.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Option+Hyphen (-)</td>
+    </tr>
+    <tr>
+      <td>Hide column(s).</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+0</td>
+    </tr>
+    <tr>
+      <td>Hide row(s).</td>
+      <td>Control+9</td>
+    </tr>
+    <tr>
+      <td>Unhide column(s).</td>
+      <td>Shift+<img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+0 or Shift+Control+Right parenthesis ())</td>
+    </tr>
+    <tr>
+      <td>Unhide row(s).</td>
+      <td>Shift+Control+9 or Shift+Control+Left parenthesis (()</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="work-in-cells-or-the-formula-bar-1">Work in cells or the formula bar</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move to the cell on the right.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Move within cell text.</td>
+      <td>Arrow keys</td>
+    </tr>
+    <tr>
+      <td>Copy a selection.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+C</td>
+    </tr>
+    <tr>
+      <td>Paste a selection.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+V</td>
+    </tr>
+    <tr>
+      <td>Cut a selection.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+X</td>
+    </tr>
+    <tr>
+      <td>Undo an action.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Z</td>
+    </tr>
+    <tr>
+      <td>Redo an action.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Y or  <img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Shift+Z</td>
+    </tr>
+    <tr>
+      <td>Apply bold formatting to the selected text.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+B</td>
+    </tr>
+    <tr>
+      <td>Apply italic formatting to the selected text.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+I</td>
+    </tr>
+    <tr>
+      <td>Underline the selected text.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+U</td>
+    </tr>
+    <tr>
+      <td>Select all.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+A</td>
+    </tr>
+    <tr>
+      <td>Select a range of cells.</td>
+      <td>Shift+Left or Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Insert a line break within a cell.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Option+Return or Control+Option+Return</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the beginning of the current line within a cell.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the end of the current line within a cell.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the beginning of the current cell.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the end of the current cell.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor up by one paragraph within a cell that contains a line break.</td>
+      <td>Option+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor down by one paragraph within a cell that contains a line break.</td>
+      <td>Option+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor right by one word.</td>
+      <td>Option+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor left by one word.</td>
+      <td>Option+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Insert an AutoSum formula.</td>
+      <td>Shift+<img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+T</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="see-also-2">See also</h2>
+
+<h2 id="in-this-topic-3">In this topic</h2>
+
+<h2 id="navigate-the-worksheet-1">Navigate the worksheet</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move one cell to the right.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Move one cell up, down, left, or right.</td>
+      <td>Up, Down, Left, or Right arrow key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="work-with-cells">Work with cells</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Save a worksheet.</td>
+      <td>Control+S</td>
+    </tr>
+    <tr>
+      <td>Copy a selection.</td>
+      <td>Control+C</td>
+    </tr>
+    <tr>
+      <td>Paste a selection.</td>
+      <td>Control+V</td>
+    </tr>
+    <tr>
+      <td>Cut a selection.</td>
+      <td>Control+X</td>
+    </tr>
+    <tr>
+      <td>Undo an action.</td>
+      <td>Control+Z</td>
+    </tr>
+    <tr>
+      <td>Redo an action.</td>
+      <td>Control+Y</td>
+    </tr>
+    <tr>
+      <td>Apply bold formatting.</td>
+      <td>Control+B</td>
+    </tr>
+    <tr>
+      <td>Apply italic formatting.</td>
+      <td>Control+I</td>
+    </tr>
+    <tr>
+      <td>Apply underline formatting.</td>
+      <td>Control+U</td>
+    </tr>
+    <tr>
+      <td>Select all.</td>
+      <td>Control+A</td>
+    </tr>
+    <tr>
+      <td>Find.</td>
+      <td>Control+F</td>
+    </tr>
+    <tr>
+      <td>Insert a line break within a cell.</td>
+      <td>Alt+Enter</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="see-also-3">See also</h2>
+
+<h2 id="in-this-article">In this article</h2>
+
+<h2 id="quick-tips-for-using-keyboard-shortcuts-with-excel-for-the-web">Quick tips for using keyboard shortcuts with Excel for the web</h2>
+
+<h2 id="frequently-used-shortcuts-2">Frequently used shortcuts</h2>
+
+<h2 id="access-keys-shortcuts-for-using-the-ribbon">Access keys: Shortcuts for using the ribbon</h2>
+
+<h3 id="go-to-the-access-keys-for-the-ribbon">Go to the access keys for the ribbon</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>sPress</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Go to the <strong>Search</strong> or <strong>Tell Me</strong> field on the ribbon and type a search term.</td>
+      <td>Alt+Windows logo key, Q</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>File</strong> menu.</td>
+      <td>Alt+Windows logo key, F</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Home</strong> tab and format text and numbers or use other tools such as <strong>Sort &amp; Filter</strong>.</td>
+      <td>Alt+Windows logo key, H</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Insert</strong> tab and insert a function, table, chart, hyperlink, or threaded comment.</td>
+      <td>Alt+Windows logo key, N</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Data</strong> tab and refresh connections or use data tools.</td>
+      <td>Alt+Windows logo key, A</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Review</strong> tab and use the Accessibility Checker or work with threaded comments and notes.</td>
+      <td>Alt+Windows logo key, R</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>View</strong> tab to choose a view, freeze rows or columns in your worksheet, or show gridlines and headers.</td>
+      <td>Alt+Windows logo key, W</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="work-in-the-ribbon-tabs-and-menus">Work in the ribbon tabs and menus</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Select the active tab of the ribbon and activate the access keys.</td>
+      <td>Alt+Windows logo key. To move to a different tab, use an access key or the Tab key.</td>
+    </tr>
+    <tr>
+      <td>Move the focus to commands on the ribbon.</td>
+      <td>Enter, then the Tab key or Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Activate a selected button.</td>
+      <td>Spacebar or Enter</td>
+    </tr>
+    <tr>
+      <td>Open the list for a selected command.</td>
+      <td>Spacebar or Enter</td>
+    </tr>
+    <tr>
+      <td>Open the menu for a selected button.</td>
+      <td>Alt+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>When a menu or submenu is open, move to the next command.</td>
+      <td>Esc</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-editing-cells">Keyboard shortcuts for editing cells</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Insert a row above the current row.</td>
+      <td>Alt+Windows logo key, H, I, R</td>
+    </tr>
+    <tr>
+      <td>Insert a column to the left of the current column.</td>
+      <td>Alt+Windows logo key, H, I, C</td>
+    </tr>
+    <tr>
+      <td>Cut selection.</td>
+      <td>Ctrl+X</td>
+    </tr>
+    <tr>
+      <td>Copy selection.</td>
+      <td>Ctrl+C</td>
+    </tr>
+    <tr>
+      <td>Paste selection.</td>
+      <td>Ctrl+V</td>
+    </tr>
+    <tr>
+      <td>Undo an action.</td>
+      <td>Ctrl+Z</td>
+    </tr>
+    <tr>
+      <td>Redo an action.</td>
+      <td>Ctrl+Y</td>
+    </tr>
+    <tr>
+      <td>Start a new line in the same cell.</td>
+      <td>Alt+Enter</td>
+    </tr>
+    <tr>
+      <td>Insert a hyperlink.</td>
+      <td>Ctrl+K</td>
+    </tr>
+    <tr>
+      <td>Insert a table.</td>
+      <td>Ctrl+L</td>
+    </tr>
+    <tr>
+      <td>Insert a function.</td>
+      <td>Shift+F3</td>
+    </tr>
+    <tr>
+      <td>Increase font size.</td>
+      <td>Ctrl+Shift+Right angle bracket (&gt;)</td>
+    </tr>
+    <tr>
+      <td>Decrease font size.</td>
+      <td>Ctrl+Shift+Left angle bracket (&lt;)</td>
+    </tr>
+    <tr>
+      <td>Apply a filter.</td>
+      <td>Alt+Windows logo key, A, T</td>
+    </tr>
+    <tr>
+      <td>Re-apply a filter.</td>
+      <td>Ctrl+Alt+L</td>
+    </tr>
+    <tr>
+      <td>Toggle <strong>AutoFilter</strong> on and off.</td>
+      <td>Ctrl+Shift+L</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-entering-data">Keyboard shortcuts for entering data</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Complete cell entry and select the cell below.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Complete cell entry and select the cell above.</td>
+      <td>Shift+Enter</td>
+    </tr>
+    <tr>
+      <td>Complete cell entry and select the next cell in the row.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Complete cell entry and select the previous cell in the row.</td>
+      <td>Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Cancel cell entry.</td>
+      <td>Esc</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-editing-data-within-a-cell">Keyboard shortcuts for editing data within a cell</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Edit the selected cell.</td>
+      <td>F2</td>
+    </tr>
+    <tr>
+      <td>Cycle through all the various combinations of <a href="/en-gb/office/switch-between-relative-absolute-and-mixed-references-dfec08cd-ae65-4f56-839e-5f0d8d0baca9">absolute and relative references</a> when a cell reference or range is selected in a formula.</td>
+      <td>F4</td>
+    </tr>
+    <tr>
+      <td>Clear the selected cell.</td>
+      <td>Delete</td>
+    </tr>
+    <tr>
+      <td>Clear the selected cell and start editing.</td>
+      <td>Backspace</td>
+    </tr>
+    <tr>
+      <td>Go to beginning of cell line.</td>
+      <td>Home</td>
+    </tr>
+    <tr>
+      <td>Go to end of cell line.</td>
+      <td>End</td>
+    </tr>
+    <tr>
+      <td>Select right by one character.</td>
+      <td>Shift+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Select to the beginning of cell data.</td>
+      <td>Shift+Home</td>
+    </tr>
+    <tr>
+      <td>Select to the end of cell data.</td>
+      <td>Shift+End</td>
+    </tr>
+    <tr>
+      <td>Select left by one character.</td>
+      <td>Shift+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Extend selection to the last nonblank cell in the same column or row as the active cell, or if the next cell is blank, to the next nonblank cell.</td>
+      <td>Ctrl+Shift+Right arrow key or Ctrl+Shift+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Insert the current date.</td>
+      <td>Ctrl+Semicolon (;)</td>
+    </tr>
+    <tr>
+      <td>Insert the current time.</td>
+      <td>Ctrl+Shift+Semicolon (;)</td>
+    </tr>
+    <tr>
+      <td>Copy a formula from the cell above.</td>
+      <td>Ctrl+Apostrophe (‘)</td>
+    </tr>
+    <tr>
+      <td>Copy the value from the cell above.</td>
+      <td>Ctrl+Shift+Apostrophe (‘)</td>
+    </tr>
+    <tr>
+      <td>Insert a formula argument.</td>
+      <td>Ctrl+Shift+A</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-formatting-cells-1">Keyboard shortcuts for formatting cells</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apply bold formatting.</td>
+      <td>Ctrl+B</td>
+    </tr>
+    <tr>
+      <td>Apply italic formatting.</td>
+      <td>Ctrl+I</td>
+    </tr>
+    <tr>
+      <td>Apply underline formatting.</td>
+      <td>Ctrl+U</td>
+    </tr>
+    <tr>
+      <td>Paste formatting.</td>
+      <td>Shift+Ctrl+V</td>
+    </tr>
+    <tr>
+      <td>Apply the outline border to the selected cells.</td>
+      <td>Ctrl+Shift+Ampersand (&amp;)</td>
+    </tr>
+    <tr>
+      <td>Apply the number format.</td>
+      <td>Ctrl+Shift+1</td>
+    </tr>
+    <tr>
+      <td>Apply the time format.</td>
+      <td>Ctrl+Shift+2</td>
+    </tr>
+    <tr>
+      <td>Apply the date format.</td>
+      <td>Ctrl+Shift+3</td>
+    </tr>
+    <tr>
+      <td>Apply the currency format.</td>
+      <td>Ctrl+Shift+4</td>
+    </tr>
+    <tr>
+      <td>Apply the percentage format.</td>
+      <td>Ctrl+Shift+5</td>
+    </tr>
+    <tr>
+      <td>Apply the scientific format.</td>
+      <td>Ctrl+Shift+6</td>
+    </tr>
+    <tr>
+      <td>Apply outside border.</td>
+      <td>Ctrl+Shift+7</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Number Format</strong> dialog box.</td>
+      <td>Ctrl+1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-moving-and-scrolling-within-worksheets">Keyboard shortcuts for moving and scrolling within worksheets</h2>
+
+<h2 id="keyboard-shortcuts-for-working-with-objects">Keyboard shortcuts for working with objects</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open menu or drill down.</td>
+      <td>Alt+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Close menu or drill up.</td>
+      <td>Alt+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Follow hyperlink.</td>
+      <td>Ctrl+Enter</td>
+    </tr>
+    <tr>
+      <td>Open a note for editing.</td>
+      <td>Shift+F2</td>
+    </tr>
+    <tr>
+      <td>Open and reply to a threaded comment.</td>
+      <td>Ctrl+Shift+F2</td>
+    </tr>
+    <tr>
+      <td>Rotate an object left.</td>
+      <td>Alt+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Rotate an object right.</td>
+      <td>Alt+Right arrow key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-working-with-cells-rows-columns-and-objects">Keyboard shortcuts for working with cells, rows, columns, and objects</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Select a range of cells.</td>
+      <td>Shift+Arrow keys</td>
+    </tr>
+    <tr>
+      <td>Select an entire column.</td>
+      <td>Ctrl+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Select an entire row.</td>
+      <td>Shift+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Extend selection to the last nonblank cell in the same column or row as the active cell, or if the next cell is blank, to the next nonblank cell.</td>
+      <td>Ctrl+Shift+Right arrow key or Ctrl+Shift+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Add a non-adjacent cell or range to a selection.</td>
+      <td>Shift+F8</td>
+    </tr>
+    <tr>
+      <td>Insert cells, rows, or columns.</td>
+      <td>Ctrl+Plus sign (+)</td>
+    </tr>
+    <tr>
+      <td>Delete cells, rows, or columns.</td>
+      <td>Ctrl+Minus sign (-)</td>
+    </tr>
+    <tr>
+      <td>Hide rows.</td>
+      <td>Ctrl+9</td>
+    </tr>
+    <tr>
+      <td>Unhide rows.</td>
+      <td>Ctrl+Shift+9</td>
+    </tr>
+    <tr>
+      <td>Hide columns</td>
+      <td>Ctrl+0</td>
+    </tr>
+    <tr>
+      <td>Unhide columns</td>
+      <td>Ctrl+Shift+0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-moving-within-a-selected-range">Keyboard shortcuts for moving within a selected range</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move from top to bottom (or forward through the selection).</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Move from bottom to top (or back through the selection).</td>
+      <td>Shift+Enter</td>
+    </tr>
+    <tr>
+      <td>Move forward through a row (or down through a single-column selection).</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Move back through a row (or up through a single-column selection).</td>
+      <td>Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Move to an active cell.</td>
+      <td>Shift+Backspace</td>
+    </tr>
+    <tr>
+      <td>Move to an active cell and keep the selection.</td>
+      <td>Ctrl+Backspace</td>
+    </tr>
+    <tr>
+      <td>Rotate the active cell through the corners of the selection.</td>
+      <td>Ctrl+Period (.)</td>
+    </tr>
+    <tr>
+      <td>Move to the next selected range.</td>
+      <td>Ctrl+Alt+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the previous selected range.</td>
+      <td>Ctrl+Alt+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Extend selection to the last used cell in the sheet.</td>
+      <td>Ctrl+Shift+End</td>
+    </tr>
+    <tr>
+      <td>Extend selection to the first cell in the sheet.</td>
+      <td>Ctrl+Shift+Home</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="keyboard-shortcuts-for-calculating-data">Keyboard shortcuts for calculating data</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Calculate workbook (refresh).</td>
+      <td>F9</td>
+    </tr>
+    <tr>
+      <td>Perform full calculation.</td>
+      <td>Ctrl+Shift+Alt+F9</td>
+    </tr>
+    <tr>
+      <td>Refresh external data.</td>
+      <td>Alt+F5</td>
+    </tr>
+    <tr>
+      <td>Refresh all external data.</td>
+      <td>Ctrl+Alt+F5</td>
+    </tr>
+    <tr>
+      <td>Apply <strong>Auto Sum</strong>.</td>
+      <td>Alt+Equal sign ( = )</td>
+    </tr>
+    <tr>
+      <td>Apply <strong>Flash Fill</strong>.</td>
+      <td>Ctrl+E</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="accessibility-shortcuts-menu-altshifta">Accessibility Shortcuts Menu (Alt+Shift+A)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cycle between landmark regions.</td>
+      <td>Ctrl+F6 or Ctrl+Shift+F6</td>
+    </tr>
+    <tr>
+      <td>Move within a landmark region.</td>
+      <td>Tab key or Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Go to the <strong>Search</strong> or <strong>Tell Me</strong> field to run any command.</td>
+      <td>Alt+Q</td>
+    </tr>
+    <tr>
+      <td>Display or hide Key Tips or access the ribbon.</td>
+      <td>Alt+Windows logo key</td>
+    </tr>
+    <tr>
+      <td>Edit the selected cell.</td>
+      <td>F2</td>
+    </tr>
+    <tr>
+      <td>Go to a specific cell.</td>
+      <td>Ctrl+G</td>
+    </tr>
+    <tr>
+      <td>Move to another worksheet in the workbook.</td>
+      <td>Ctrl+Alt+Page up or Ctrl+Alt+Page down</td>
+    </tr>
+    <tr>
+      <td>Open the context menu.</td>
+      <td>Shift+F10 or Windows Menu key</td>
+    </tr>
+    <tr>
+      <td>Read row header.</td>
+      <td>Ctrl+Alt+Shift+T</td>
+    </tr>
+    <tr>
+      <td>Read row until an active cell.</td>
+      <td>Ctrl+Alt+Shift+Home</td>
+    </tr>
+    <tr>
+      <td>Read row from an active cell.</td>
+      <td>Ctrl+Alt+Shift+End</td>
+    </tr>
+    <tr>
+      <td>Read column header.</td>
+      <td>Ctrl+Alt+Shift+H</td>
+    </tr>
+    <tr>
+      <td>Read column until an active cell.</td>
+      <td>Ctrl+Alt+Shift+Page up</td>
+    </tr>
+    <tr>
+      <td>Read column from an active cell.</td>
+      <td>Ctrl+Alt+Shift+Page down</td>
+    </tr>
+    <tr>
+      <td>Open a list of moving options within a dialog box.</td>
+      <td>Ctrl+Alt+Spacebar</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="reference-links">Reference links</h2>
+
+<p><a href="https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f">Keyboard shortcuts in Excel</a></p>
+
+<h2 id="tags">Tags</h2>
+
+<p>#Windows</p>
+
+<p>#Microsoft</p>
+
+<p>#Excel 365</p>
+
+<p>#English</p>
+
+  </body>
+</html>

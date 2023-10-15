@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Keyboard shortcuts in Microsoft Edge - </title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script>
+      // Add event listener to receive messages from the parent window
+      window.addEventListener("message", function (event) {
+          // Check if the event data is a filter value
+          if (event.data && typeof event.data === "string") {
+              var filter = event.data.toUpperCase();
+
+              // Get all tables in this document
+              var tables = document.getElementsByTagName("table");
+
+              // Loop through each table
+              for (var i = 0; i < tables.length; i++) {
+                  var table = tables[i];
+                  var rows = table.getElementsByTagName("tr");
+
+                  // Initialize a variable to track whether to display the table
+                  var displayTable = false;
+
+                  // Loop through each row
+                  for (var j = 0; j < rows.length; j++) {
+                      var row = rows[j];
+                      var cells = row.getElementsByTagName("td");
+
+                      // Initialize a variable to track whether to display the row
+                      var displayRow = false;
+
+                      // Loop through each cell in the row
+                      for (var k = 0; k < cells.length; k++) {
+                          var cell = cells[k];
+                          var cellText = cell.textContent || cell.innerText;
+
+                          // Check if the cell text contains the filter text
+                          if (cellText.toUpperCase().indexOf(filter) > -1) {
+                              displayRow = true;
+                              displayTable = true;
+                              break;
+                          }
+                      }
+
+                      // Set the row's display style based on whether to show or hide it
+                      row.style.display = displayRow ? "" : "none";
+                  }
+
+                  // Set the table's display style based on whether to show or hide it
+                  table.style.display = displayTable ? "" : "none";
+              }
+          }
+      });
+  </script>
+  </head>
+  <body>
+    <h1 id="keyboard-shortcuts-in-microsoft-edge">Keyboard shortcuts in Microsoft Edge</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Press this key</strong></th>
+      <th><strong>To do this</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>B</strong></td>
+      <td>Show or hide the favorites bar</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>Shift</strong> + <strong>B</strong></td>
+      <td>Set focus on the first item in the favorites bar</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>D</strong></td>
+      <td>Save the current tab as a favorite</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>D</strong></td>
+      <td>Save all open tabs as favorites in a new folder</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>E</strong></td>
+      <td>Open search in sidebar</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>D</strong></td>
+      <td>Select the URL in the address bar to edit</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>E</strong></td>
+      <td>Open a search query in the address bar</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>E</strong></td>
+      <td>Open the Settings and more menu</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>F</strong></td>
+      <td>Open find on page</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>F</strong></td>
+      <td>Open the Settings and more menu</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>G</strong></td>
+      <td>Jump to the next result for find on page</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>G</strong></td>
+      <td>Jump to the previous result for find on page</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>H</strong></td>
+      <td>Open History </td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>I</strong></td>
+      <td>Open Developer Tools</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>Shift</strong> + <strong>I</strong></td>
+      <td>Open the Send feedback dialog</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>J</strong></td>
+      <td>Open Downloads </td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>K</strong></td>
+      <td>Open a search query in the address bar</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>K</strong></td>
+      <td>Duplicate the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>L</strong></td>
+      <td>Select the URL in the address bar to edit</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>L</strong></td>
+      <td>Paste and search or Paste and go (if it’s a URL)</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>M</strong></td>
+      <td>Mute the current tab (toggle)</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>M</strong></td>
+      <td>Sign in as a different user or browse as a Guest</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>N</strong></td>
+      <td>Open a new window</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>N</strong></td>
+      <td>Open a new InPrivate window</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>O</strong></td>
+      <td>Open a file from your computer in Edge</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>O</strong></td>
+      <td>Open Favorites </td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>P</strong></td>
+      <td>Print the current page</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>P</strong></td>
+      <td>Print using the system dialog</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl + R</strong></td>
+      <td>Reload the current page</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>R</strong></td>
+      <td>Reload the current page, ignoring cached content</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>S</strong></td>
+      <td>Save the current page</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>T</strong></td>
+      <td>Open a new tab and switch to it</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>T</strong></td>
+      <td>Reopen the last closed tab, and switch to it</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>Shift</strong> + <strong>T</strong></td>
+      <td>Set focus on the first item in the app bar toolbar</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>U</strong></td>
+      <td>View source</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>U</strong></td>
+      <td>Start or stop Read Aloud</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>V</strong></td>
+      <td>Paste without formatting</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>W</strong></td>
+      <td>Close the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>W</strong></td>
+      <td>Close the current window</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>Y</strong></td>
+      <td>Open Collections</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>0</strong> (zero)</td>
+      <td>Reset page zoom level</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>1</strong>, <strong>2</strong>, … <strong>8</strong></td>
+      <td>Switch to a specific tab</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>9</strong></td>
+      <td>Switch to the last tab</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Enter</strong></td>
+      <td>Add www. to the beginning and .com to the end of text typed in the address bar</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Tab</strong></td>
+      <td>Switch to the next tab</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>Tab</strong></td>
+      <td>Switch to the previous tab</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Plus</strong> (<strong>+</strong>)</td>
+      <td>Zoom in</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Minus</strong> (<strong>-</strong>)</td>
+      <td>Zoom out</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>\</strong> (in a PDF)</td>
+      <td>Toggle PDF between fit to page / fit to width</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>[ </strong>(in a PDF)</td>
+      <td>Rotate PDF counter-clockwise 90*</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>]</strong> (in a PDF)</td>
+      <td>Rotate PDF clockwise 90*</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Shift</strong> + <strong>Delete</strong></td>
+      <td>Open clear browsing data options</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong></td>
+      <td>Set focus on the Settings and more button</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>Left arrow</strong></td>
+      <td>Go back</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>Right arrow</strong></td>
+      <td>Go forward</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>Home</strong></td>
+      <td>Open your home page in the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>Alt</strong> + <strong>F4</strong></td>
+      <td>Close the current window</td>
+    </tr>
+    <tr>
+      <td><strong>F1</strong></td>
+      <td>Open Help</td>
+    </tr>
+    <tr>
+      <td><strong>F3</strong></td>
+      <td>Find in the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>F4</strong></td>
+      <td>Select the URL in the address bar</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>F4</strong></td>
+      <td>Close the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>F5</strong></td>
+      <td>Reload the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong> + <strong>F5</strong></td>
+      <td>Reload the current tab, ignoring cached content</td>
+    </tr>
+    <tr>
+      <td><strong>F6</strong></td>
+      <td>Move focus to next pane</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong> + <strong>F6</strong></td>
+      <td>Move focus to previous pane</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>F6</strong></td>
+      <td>Move focus to the web content pane</td>
+    </tr>
+    <tr>
+      <td><strong>F7</strong></td>
+      <td>Turn caret browsing on or off</td>
+    </tr>
+    <tr>
+      <td><strong>F9</strong></td>
+      <td>Enter or exit Immersive Reader</td>
+    </tr>
+    <tr>
+      <td><strong>F10</strong></td>
+      <td>Set focus on the Settings and more button</td>
+    </tr>
+    <tr>
+      <td><strong>F10</strong> + <strong>Enter</strong></td>
+      <td>Open Setting and more menu</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong> + <strong>F10</strong></td>
+      <td>Open context menu</td>
+    </tr>
+    <tr>
+      <td><strong>F11</strong></td>
+      <td>Enter full screen (toggle)</td>
+    </tr>
+    <tr>
+      <td><strong>F12</strong></td>
+      <td>Open Developer Tools</td>
+    </tr>
+    <tr>
+      <td><strong>Esc</strong></td>
+      <td>Stop loading page; close dialog or pop-up</td>
+    </tr>
+    <tr>
+      <td><strong>Spacebar</strong></td>
+      <td>Scroll down webpage, one screen at a time</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong> + <strong>Spacebar</strong></td>
+      <td>Scroll up webpage, one screen at a time</td>
+    </tr>
+    <tr>
+      <td><strong>PgDn</strong></td>
+      <td>Scroll down webpage, one screen at a time</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>PgDn</strong></td>
+      <td>Switch to the next tab</td>
+    </tr>
+    <tr>
+      <td><strong>PgUp</strong></td>
+      <td>Scroll up webpage, one screen at a time</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>PgUp</strong></td>
+      <td>Switch to the previous tab</td>
+    </tr>
+    <tr>
+      <td><strong>Home</strong></td>
+      <td>Go to the top of the page, Move keyboard focus to first item of pane</td>
+    </tr>
+    <tr>
+      <td><strong>End</strong></td>
+      <td>Go to the bottom of the page, Move keyboard focus to last item of pane</td>
+    </tr>
+    <tr>
+      <td><strong>Tab</strong></td>
+      <td>Go to next tab stop</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong> + <strong>Tab</strong></td>
+      <td>Go to previous tab stop</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>| <strong>Press this key</strong>                    | <strong>To do this</strong>                                              |
+|—————————————|————————————————————-|</p>
+
+<h2 id="reference-links">Reference links</h2>
+
+<p><a href="https://support.microsoft.com/en-us/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad">Keyboard shortcuts in Microsoft Edge</a></p>
+
+<h2 id="tags">Tags</h2>
+
+<p>#Windows</p>
+
+<p>#Microsoft</p>
+
+<p>#Edge</p>
+
+<p>#English</p>
+
+  </body>
+</html>

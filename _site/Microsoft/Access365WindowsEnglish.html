@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Keyboard shortcuts for Access New" - </title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script>
+      // Add event listener to receive messages from the parent window
+      window.addEventListener("message", function (event) {
+          // Check if the event data is a filter value
+          if (event.data && typeof event.data === "string") {
+              var filter = event.data.toUpperCase();
+
+              // Get all tables in this document
+              var tables = document.getElementsByTagName("table");
+
+              // Loop through each table
+              for (var i = 0; i < tables.length; i++) {
+                  var table = tables[i];
+                  var rows = table.getElementsByTagName("tr");
+
+                  // Initialize a variable to track whether to display the table
+                  var displayTable = false;
+
+                  // Loop through each row
+                  for (var j = 0; j < rows.length; j++) {
+                      var row = rows[j];
+                      var cells = row.getElementsByTagName("td");
+
+                      // Initialize a variable to track whether to display the row
+                      var displayRow = false;
+
+                      // Loop through each cell in the row
+                      for (var k = 0; k < cells.length; k++) {
+                          var cell = cells[k];
+                          var cellText = cell.textContent || cell.innerText;
+
+                          // Check if the cell text contains the filter text
+                          if (cellText.toUpperCase().indexOf(filter) > -1) {
+                              displayRow = true;
+                              displayTable = true;
+                              break;
+                          }
+                      }
+
+                      // Set the row's display style based on whether to show or hide it
+                      row.style.display = displayRow ? "" : "none";
+                  }
+
+                  // Set the table's display style based on whether to show or hide it
+                  table.style.display = displayTable ? "" : "none";
+              }
+          }
+      });
+  </script>
+  </head>
+  <body>
+    <h1 id="keyboard-shortcuts-for-access">Keyboard shortcuts for Access</h1>
+
+<h2 id="in-this-topic">In this topic</h2>
+
+<h2 id="frequently-used-shortcuts">Frequently used shortcuts</h2>
+
+<h2 id="navigate-the-ribbon-with-only-the-keyboard">Navigate the ribbon with only the keyboard</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Go to the <strong>File</strong> menu.</td>
+      <td>Alt+F</td>
+    </tr>
+    <tr>
+      <td>Go to the <strong>Home</strong> tab.</td>
+      <td>Alt+H</td>
+    </tr>
+    <tr>
+      <td>Go to the <strong>Create</strong> tab.</td>
+      <td>Alt+C</td>
+    </tr>
+    <tr>
+      <td>Go to the <strong>External Data</strong> tab.</td>
+      <td>Alt+X or Alt+X, 1</td>
+    </tr>
+    <tr>
+      <td>Go to the <strong>Database Tools</strong> tab.</td>
+      <td>Alt+Y, 2</td>
+    </tr>
+    <tr>
+      <td>Go to the <strong>Table</strong> tab.</td>
+      <td>Alt+J, T</td>
+    </tr>
+    <tr>
+      <td>Go to the <strong>Add-ins</strong> tab, if present.</td>
+      <td>Alt+X, 2</td>
+    </tr>
+    <tr>
+      <td>Go to the <strong>Tell me</strong> box on the ribbon.</td>
+      <td>Alt+Q</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="use-the-keyboard-to-work-with-ribbon-tabs">Use the keyboard to work with ribbon tabs</h3>
+
+<h2 id="work-with-database-files">Work with database files</h2>
+
+<h3 id="open-and-save-databases">Open and save databases</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open a new database.</td>
+      <td>Ctrl+N</td>
+    </tr>
+    <tr>
+      <td>Open an existing database.</td>
+      <td>Ctrl+O or Ctrl+F12</td>
+    </tr>
+    <tr>
+      <td>Open the selected folder or file.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Open the folder one level above the selected folder.</td>
+      <td>Backspace</td>
+    </tr>
+    <tr>
+      <td>Delete the selected folder or file.</td>
+      <td>Delete</td>
+    </tr>
+    <tr>
+      <td>Display a shortcut menu for a selected item such as a folder or file.</td>
+      <td>Shift+F10 or the Windows Menu key</td>
+    </tr>
+    <tr>
+      <td>Move forward through options.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Move backward through options.</td>
+      <td>Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Look in</strong> list.</td>
+      <td>F4 or Alt+I</td>
+    </tr>
+    <tr>
+      <td>Save a database object.</td>
+      <td>Ctrl+S or Shift+F12</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Save As</strong> dialog box.</td>
+      <td>F12 or Alt+F, S</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="print-database-information">Print database information</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Print the current or selected object.</td>
+      <td>Ctrl+P</td>
+    </tr>
+    <tr>
+      <td>From <strong>Print Preview</strong>, open the <strong>Print</strong> dialog box.</td>
+      <td>P or Ctrl+P</td>
+    </tr>
+    <tr>
+      <td>From <strong>Print Preview</strong>, open the <strong>Page Setup</strong> dialog box.</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <td>Cancel <strong>Print Preview</strong> or <strong>Layout Preview</strong>.</td>
+      <td>C or Esc</td>
+    </tr>
+    <tr>
+      <td>From the <strong>File</strong> menu, return to your database.</td>
+      <td>Esc</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="navigate-in-the-accessworkspace">Navigate in the Access workspace</h2>
+
+<h3 id="switch-from-tabbed-documents-to-windowed-documents">Switch from tabbed documents to windowed documents</h3>
+
+<h3 id="move-in-the-accessworkspace">Move in the Access workspace</h3>
+<h2 id="work-with-menus-dialog-boxes-wizards-and-property-sheets">Work with menus, dialog boxes, wizards, and property sheets</h2>
+
+<h3 id="use-menus">Use menus</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Show KeyTips.</td>
+      <td>Alt or F10</td>
+    </tr>
+    <tr>
+      <td>Show the program icon menu (on the program title bar), also known as the control menu.</td>
+      <td>Alt+Spacebar</td>
+    </tr>
+    <tr>
+      <td>With the menu or submenu visible, select the next or previous command.</td>
+      <td>Down or Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Select the menu to the left or right or, when a submenu is visible, switch between the main menu and the submenu.</td>
+      <td>Left or Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Select the first or last command on the menu or submenu.</td>
+      <td>Home or End</td>
+    </tr>
+    <tr>
+      <td>Open the selected menu, or perform the action assigned to the selected button.</td>
+      <td>Spacebar or Enter</td>
+    </tr>
+    <tr>
+      <td>Open a shortcut menu or open a dropdown menu for the selected gallery item.</td>
+      <td>Shift+F10 or the Windows Menu key</td>
+    </tr>
+    <tr>
+      <td>Scroll up or down in the selected gallery list.</td>
+      <td>Page up or Page down</td>
+    </tr>
+    <tr>
+      <td>Move to the top or bottom of the selected gallery list.</td>
+      <td>Ctrl+Home or Ctrl+End</td>
+    </tr>
+    <tr>
+      <td>Close the visible menu and submenu at the same time.</td>
+      <td>Alt</td>
+    </tr>
+    <tr>
+      <td>Close the visible menu or, with a submenu visible, close only the submenu.</td>
+      <td>Esc</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="use-dialog-boxes">Use dialog boxes</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Switch to the next tab in a dialog box.</td>
+      <td>Ctrl+Tab</td>
+    </tr>
+    <tr>
+      <td>Switch to the previous tab in a dialog box.</td>
+      <td>Ctrl+Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Move to the next or previous option or option group.</td>
+      <td>Tab key or Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Move between options in the selected dropdown list box or move between options in a group of options.</td>
+      <td>Arrow keys</td>
+    </tr>
+    <tr>
+      <td>Perform the action assigned to the selected button or select or clear the checkbox.</td>
+      <td>Spacebar</td>
+    </tr>
+    <tr>
+      <td>Open the list if it is closed and move to an option in the list.</td>
+      <td>First letter of an option in a dropdown list</td>
+    </tr>
+    <tr>
+      <td>Select the option, or select or clear the checkbox by the letter underlined in the option name.</td>
+      <td>Alt+letter key</td>
+    </tr>
+    <tr>
+      <td>Open the selected dropdown list box.</td>
+      <td>Alt+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Close the selected dropdown list box.</td>
+      <td>Esc</td>
+    </tr>
+    <tr>
+      <td>Perform the action assigned to the default button in the dialog box.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Cancel the command and close the dialog box.</td>
+      <td>Esc</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="use-wizards">Use wizards</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Toggle the focus forward between controls in the wizard.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Toggle the focus between sections (header, body, and footer) of the wizard.</td>
+      <td>F6</td>
+    </tr>
+    <tr>
+      <td>Complete the wizard.</td>
+      <td>Alt+F</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="use-property-sheets">Use property sheets</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Show or hide the property sheet.</td>
+      <td>F4</td>
+    </tr>
+    <tr>
+      <td>Move among choices in the control selection dropdown list one item at a time.</td>
+      <td>Down or Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move among choices in the control selection dropdown list one page at a time.</td>
+      <td>Page down or Page up</td>
+    </tr>
+    <tr>
+      <td>Move to the property sheet tabs from the control selection dropdown list.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Move among the property sheet tabs with a tab selected, but no property selected.</td>
+      <td>Left or Right arrow key</td>
+    </tr>
+    <tr>
+      <td>With a property already selected, move down one property on a tab.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>With a property selected, move up one property on a tab, or if already at the top, move to the tab.</td>
+      <td>Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Toggle forward between tabs when a property is selected.</td>
+      <td>Ctrl+Tab</td>
+    </tr>
+    <tr>
+      <td>Toggle backward between tabs when a property is selected.</td>
+      <td>Ctrl+Shift+Tab</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="work-with-text-boxes-combo-boxes-and-list-boxes">Work with text boxes, combo boxes, and list boxes</h2>
+
+<h3 id="edit-a-text-box">Edit a text box</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move to the beginning of the entry.</td>
+      <td>Home</td>
+    </tr>
+    <tr>
+      <td>Move to the end of the entry.</td>
+      <td>End</td>
+    </tr>
+    <tr>
+      <td>Move one character to the left or right.</td>
+      <td>Left or Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move one word to the left or right.</td>
+      <td>Ctrl+Left or Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Select from the insertion point to the beginning of the text entry.</td>
+      <td>Shift+Home</td>
+    </tr>
+    <tr>
+      <td>Select from the insertion point to the end of the text entry.</td>
+      <td>Shift+End</td>
+    </tr>
+    <tr>
+      <td>Change the selection by one character to the left.</td>
+      <td>Shift+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Change the selection by one character to the right.</td>
+      <td>Shift+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Change the selection by one word to the left.</td>
+      <td>Ctrl+Shift+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Change the selection by one word to the right.</td>
+      <td>Ctrl+Shift+Right arrow key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="use-a-combo-or-list-box">Use a combo or list box</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open a combo box.</td>
+      <td>F4 or Alt+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Refresh the contents of the <strong>Lookup field</strong> list box or a combo box.</td>
+      <td>F9</td>
+    </tr>
+    <tr>
+      <td>Move down one line.</td>
+      <td>Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Move down one page.</td>
+      <td>Page down</td>
+    </tr>
+    <tr>
+      <td>Move up one line.</td>
+      <td>Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move up one page.</td>
+      <td>Page up</td>
+    </tr>
+    <tr>
+      <td>Exit the combo box or list box.</td>
+      <td>Tab key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="work-with-objects">Work with objects</h2>
+
+<h3 id="edit-and-navigate-the-objects-list">Edit and navigate the Objects list</h3>
+
+<h3 id="navigate-and-open-objects">Navigate and open objects</h3>
+
+<p>| To do this                                                                             | Press      |
+|—————————————————————————————-|————|
+| Open the selected table or query in the <strong>Datasheet View</strong>.                            | Enter      |
+| Open the selected form or report.                                                      | Enter      |
+| Run the selected macro.                                                                | Enter      |
+| Open the selected table, query, form, report, macro, or module in the <strong>Design View</strong>. | Ctrl+Enter |
+| Display the <strong>Immediate</strong> window in the <strong>Visual Basic Editor</strong>.                       | Ctrl+G     |</p>
+<h2 id="common-shortcuts-for-the-design-layout-and-datasheet-views">Common shortcuts for the Design, Layout, and Datasheet views </h2>
+
+<h2 id="work-in-the-datasheet-view">Work in the Datasheet View</h2>
+
+<h3 id="navigate-between-fields-and-records">Navigate between fields and records</h3>
+<p>| To do this                                        | Press                                                                          |
+|—————————————————|——————————————————————————–|
+| Move to the next field.                           | Tab key or Right arrow key                                                     |
+| Move to the last field in the current record.     | End                                                                            |
+| Move to the previous field.                       | Shift+Tab or Left arrow key                                                    |
+| Move to the first field in the current record.    | Home                                                                           |
+| Move to the current field in the next record.     | Down arrow key                                                                 |
+| Move to the current field in the last record.     | Ctrl+Down arrow key                                                            |
+| Move to the last field in the last record.        | Ctrl+End                                                                       |
+| Move to the current field in the previous record. | Up arrow key                                                                   |
+| Move to the current field in the first record.    | Ctrl+Up arrow key                                                              |
+| Move to the first field in the first record.      | Ctrl+Home                                                                      |
+| Go to a specific record.                          | Alt+F5, then, in the record number box, type the record number and pressEnter |</p>
+
+<h3 id="navigate-to-another-screen-of-data">Navigate to another screen of data</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move up one screen.</td>
+      <td>Page up</td>
+    </tr>
+    <tr>
+      <td>Move down one screen.</td>
+      <td>Page down</td>
+    </tr>
+    <tr>
+      <td>Move right one screen.</td>
+      <td>Ctrl+Page down</td>
+    </tr>
+    <tr>
+      <td>Move left one screen.</td>
+      <td>Ctrl+Page up</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="select-and-move-a-column">Select and move a column</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Select the current column or cancel the column selection, in <strong>Navigation</strong> mode only.</td>
+      <td>Ctrl+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Extend the selection one column to the right, if the current column is selected.</td>
+      <td>Shift+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Extend the selection one column to the left, if the current column is selected.</td>
+      <td>Shift+Left arrow key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="work-with-subdatasheets">Work with subdatasheets</h3>
+
+<h2 id="work-in-the-design-view">Work in the Design View</h2>
+
+<h3 id="navigate-in-the-design-view">Navigate in the Design View</h3>
+
+<h3 id="edit-using-controls-in-the-form-and-report-in-the-design-view">Edit using controls in the form and report in the Design View</h3>
+
+<h2 id="navigate-in-theform-view">Navigate in the Form View</h2>
+
+<h3 id="navigate-between-fields-and-records-1">Navigate between fields and records</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move to the next field.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Move to the previous field.</td>
+      <td>Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Move to the last control on the form and remain in the current record.</td>
+      <td>End</td>
+    </tr>
+    <tr>
+      <td>Move to the last control on the form and set focus in the last record.</td>
+      <td>Ctrl+End</td>
+    </tr>
+    <tr>
+      <td>Move to the first control on the form and remain in the current record.</td>
+      <td>Home</td>
+    </tr>
+    <tr>
+      <td>Move to the first control on the form and set focus in the first record.</td>
+      <td>Ctrl+Home</td>
+    </tr>
+    <tr>
+      <td>Move to the current field in the next record.</td>
+      <td>Ctrl+Page down</td>
+    </tr>
+    <tr>
+      <td>Move to the current field in the previous record.</td>
+      <td>Ctrl+Page up</td>
+    </tr>
+    <tr>
+      <td>Go to a specific record.</td>
+      <td>Alt+F5, then, in the record number box, type the record number and press Enter</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="navigate-in-forms-with-more-than-one-page">Navigate in forms with more than one page</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move down one page, or at the end of the record, move to the equivalent page on the next record.</td>
+      <td>Page down</td>
+    </tr>
+    <tr>
+      <td>Move up one page, or at the end of the record, move to the equivalent page on the previous record.</td>
+      <td>Page up</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="navigate-between-a-main-form-and-a-subform">Navigate between a main form and a subform</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Enter the subform from the preceding field in the main form.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Enter the subform from the following field in the main form.</td>
+      <td>Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Exit the subform and move to the next field in the master form or next record.</td>
+      <td>Ctrl+Tab</td>
+    </tr>
+    <tr>
+      <td>Exit the subform and move to the previous field in the main form or previous record.</td>
+      <td>Ctrl+Shift+Tab</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="navigate-in-the-print-preview-and-layout-preview">Navigate in the Print Preview and Layout Preview</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open the <strong>Print</strong> dialog box (for datasheets, forms, and reports).</td>
+      <td>Ctrl+P</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Page Setup</strong> dialog box (for forms and reports).</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <td>Cancel <strong>Print Preview</strong> or <strong>Layout Preview</strong>.</td>
+      <td>C or Esc</td>
+    </tr>
+    <tr>
+      <td>Scroll down in small increments.</td>
+      <td>Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Scroll down one full screen.</td>
+      <td>Page down</td>
+    </tr>
+    <tr>
+      <td>Move to the bottom of the page.</td>
+      <td>Ctrl+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Scroll up in small increments.</td>
+      <td>Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Scroll up one full screen.</td>
+      <td>Page up</td>
+    </tr>
+    <tr>
+      <td>Move to the top of the page.</td>
+      <td>Ctrl+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Scroll to the right in small increments.</td>
+      <td>Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the right edge of the page.</td>
+      <td>End</td>
+    </tr>
+    <tr>
+      <td>Move to the lower-right corner of the page.</td>
+      <td>Ctrl+End</td>
+    </tr>
+    <tr>
+      <td>Scroll to the left in small increments.</td>
+      <td>Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the left edge of the page.</td>
+      <td>Home</td>
+    </tr>
+    <tr>
+      <td>Move to the upper-left corner of the page.</td>
+      <td>Ctrl+Home</td>
+    </tr>
+    <tr>
+      <td>Move to the page number box.</td>
+      <td>Alt+F5, then, type the page number and press Enter</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="work-with-panes">Work with panes</h2>
+
+<h3 id="use-a-diagram-pane">Use a diagram pane</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move among tables, views, and functions (and join lines, if available).</td>
+      <td>Tab key or Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Move between columns in a table, view, or function.</td>
+      <td>Arrow keys</td>
+    </tr>
+    <tr>
+      <td>Choose the selected data column for output.</td>
+      <td>Spacebar or Plus sign (+)</td>
+    </tr>
+    <tr>
+      <td>Remove the selected data column from the query output.</td>
+      <td>Spacebar or Minus sign (-)</td>
+    </tr>
+    <tr>
+      <td>Remove the selected table, view, or function, or join line from the query.</td>
+      <td>Delete</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="use-a-grid-pane">Use a grid pane</h3>
+
+<h3 id="use-an-sql-pane">Use an SQL pane</h3>
+
+<h3 id="use-the-field-list-pane-with-a-form-or-report-in-the-design-view-or-layout-view">Use the Field List pane with a form or report in the Design View or Layout View</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Show or hide the <strong>Field List</strong> pane.</td>
+      <td>Alt+F8</td>
+    </tr>
+    <tr>
+      <td>Add the selected field to the form or report detail section.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Move up or down the <strong>Field List</strong> pane.</td>
+      <td>Up or Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Move between the upper and lower panes of the <strong>Field List</strong>.</td>
+      <td>Tab key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="select-text-or-data">Select text or data</h2>
+
+<h3 id="select-a-field-or-record">Select a field or record</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Select the next field.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Switch between <strong>Edit</strong> mode (with insertion point displayed) and <strong>Navigation</strong> mode in a datasheet.</td>
+      <td>F2</td>
+    </tr>
+    <tr>
+      <td>Exit <strong>Navigation</strong> mode in a form or report.</td>
+      <td>Esc</td>
+    </tr>
+    <tr>
+      <td>Switch between selecting the current record and the first field of the current record, in <strong>Navigation</strong> mode.</td>
+      <td>Shift+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Extend the selection to the previous record, if the current record is selected.</td>
+      <td>Shift+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Select all records.</td>
+      <td>Ctrl+A</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="select-text-in-a-field">Select text in a field</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Change the size of the selection by one character to the right.</td>
+      <td>Shift+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Change the size of the selection by one word to the right.</td>
+      <td>Ctrl+Shift+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Change the size of the selection by one character to the left.</td>
+      <td>Shift+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Change the size of the selection by one word to the left.</td>
+      <td>Ctrl+Shift+Left arrow key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="extend-a-selection">Extend a selection</h3>
+
+<h3 id="find-and-replace-text-or-data">Find and replace text or data</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open the <strong>Find</strong> tab in the <strong>Find and Replace</strong> dialog box.</td>
+      <td>Ctrl+F</td>
+    </tr>
+    <tr>
+      <td>Find the next occurrence of the text specified in the <strong>Find and Replace</strong> dialog box when the dialog box is closed (in the <strong>Datasheet View</strong> and <strong>Form View</strong> only).</td>
+      <td>Shift+F4</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="edit-text-or-data">Edit text or data</h2>
+
+<h3 id="move-the-insertion-point-in-a-field">Move the insertion point in a field</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move the insertion point one character to the right.</td>
+      <td>Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the insertion point one word to the right.</td>
+      <td>Ctrl+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the insertion point one character to the left.</td>
+      <td>Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the insertion point one word to the left.</td>
+      <td>Ctrl+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the insertion point to the end of the field in single-line fields, or move it to the end of the line in multiline fields.</td>
+      <td>End</td>
+    </tr>
+    <tr>
+      <td>Move the insertion point to the end of the field, in multiline fields.</td>
+      <td>Ctrl+End</td>
+    </tr>
+    <tr>
+      <td>Move the insertion point to the beginning of the field in single-line fields, or move it to the beginning of the line in multiline fields.</td>
+      <td>Home</td>
+    </tr>
+    <tr>
+      <td>Move the insertion point to the beginning of the field, in multiline fields.</td>
+      <td>Ctrl+Home</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="copy-move-or-delete-text">Copy, move, or delete text</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Copy the selection to the clipboard.</td>
+      <td>Ctrl+C</td>
+    </tr>
+    <tr>
+      <td>Cut the selection and copy it to the clipboard.</td>
+      <td>Ctrl+X</td>
+    </tr>
+    <tr>
+      <td>Paste the contents of the clipboard at the insertion point.</td>
+      <td>Ctrl+V</td>
+    </tr>
+    <tr>
+      <td>Delete the selection or the character to the left of the insertion point.</td>
+      <td>Backspace</td>
+    </tr>
+    <tr>
+      <td>Delete the selection or the character to the right of the insertion point.</td>
+      <td>Delete</td>
+    </tr>
+    <tr>
+      <td>Delete all characters to the right of the insertion point.</td>
+      <td>Ctrl+Delete</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="undo-changes">Undo changes</h3>
+
+<h3 id="enter-data-in-the-datasheet-view-or-form-view">Enter data in the Datasheet View or Form View</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Insert the current date.</td>
+      <td>Ctrl+Semicolon (;)</td>
+    </tr>
+    <tr>
+      <td>Insert the current time.</td>
+      <td>Ctrl+Shift+Colon (:)</td>
+    </tr>
+    <tr>
+      <td>Insert the default value for a field.</td>
+      <td>Ctrl+Alt+Spacebar</td>
+    </tr>
+    <tr>
+      <td>Insert the value from the same field in the previous record.</td>
+      <td>Ctrl+Apostrophe (‘)</td>
+    </tr>
+    <tr>
+      <td>Add a new record.</td>
+      <td>Ctrl+Plus sign (+)</td>
+    </tr>
+    <tr>
+      <td>In a datasheet, delete the current record.</td>
+      <td>Ctrl+Minus sign (-)</td>
+    </tr>
+    <tr>
+      <td>Save changes to the current record.</td>
+      <td>Shift+Enter</td>
+    </tr>
+    <tr>
+      <td>Switch between the values in a checkbox or option button.</td>
+      <td>Spacebar</td>
+    </tr>
+    <tr>
+      <td>Insert a new line in a Short Text or Long Text field.</td>
+      <td>Ctrl+Enter</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="refresh-fields-with-current-data">Refresh fields with current data</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Requery the underlying tables or in a subform, requery the underlying table only for the subform.</td>
+      <td>Shift+F9 or F5</td>
+    </tr>
+    <tr>
+      <td>Refresh the contents of a <strong>Lookup field</strong> list or combo box.</td>
+      <td>F9</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="navigate-in-tables-and-cells">Navigate in tables and cells</h2>
+
+<h3 id="work-and-move-around-in-tables">Work and move around in tables</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move to the next cell.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Move to the preceding cell.</td>
+      <td>Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Move to the next row.</td>
+      <td>Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the preceding row.</td>
+      <td>Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Insert a tab in a cell.</td>
+      <td>Ctrl+Tab</td>
+    </tr>
+    <tr>
+      <td>Start a new paragraph.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Add a new row at the bottom of the table.</td>
+      <td>Tab key at the end of the last row</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="move-around-in-tables-or-cells">Move around in tables or cells</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move one character to the left.</td>
+      <td>Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move one character to the right.</td>
+      <td>Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move up one line.</td>
+      <td>Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move down one line.</td>
+      <td>Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Move one word to the left.</td>
+      <td>Ctrl+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move one word to the right.</td>
+      <td>Ctrl+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the end of a line.</td>
+      <td>End</td>
+    </tr>
+    <tr>
+      <td>Move to the beginning of a line.</td>
+      <td>Home</td>
+    </tr>
+    <tr>
+      <td>Move up one paragraph.</td>
+      <td>Ctrl+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move down one paragraph.</td>
+      <td>Ctrl+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the end of a text box.</td>
+      <td>Ctrl+End</td>
+    </tr>
+    <tr>
+      <td>Move to the beginning of a text box.</td>
+      <td>Ctrl+Home</td>
+    </tr>
+    <tr>
+      <td>Repeat the last <strong>Find</strong> action.</td>
+      <td>Shift+F4</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="get-help-with-access">Get help with Access</h2>
+
+<h2 id="miscellaneous-keyboard-shortcuts">Miscellaneous keyboard shortcuts</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Display the complete hyperlink address (URL) for a selected hyperlink.</td>
+      <td>F2</td>
+    </tr>
+    <tr>
+      <td>Open the <strong>Zoom</strong> box to conveniently enter expressions and other text in small input areas.</td>
+      <td>Shift+F2</td>
+    </tr>
+    <tr>
+      <td>Copy a screenshot of the entire screen to the clipboard.</td>
+      <td>Print screen</td>
+    </tr>
+    <tr>
+      <td>Copy a screenshot of the current window to the clipboard.</td>
+      <td>Alt+Print screen</td>
+    </tr>
+    <tr>
+      <td>Display the full set of commands on the task pane menu.</td>
+      <td>Ctrl+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Exit Access.</td>
+      <td>Alt+F4</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="reference-links">Reference links</h2>
+
+<p><a href="https://support.microsoft.com/en-gb/office/keyboard-shortcuts-for-access-70a673e4-4f7b-4300-b8e5-3320fa6606e2">Keyboard shortcuts for Access</a></p>
+
+<h2 id="tags">Tags</h2>
+
+<p>#Windows</p>
+
+<p>#Microsoft</p>
+
+<p>#Access 365</p>
+
+<p>#English</p>
+
+  </body>
+</html>

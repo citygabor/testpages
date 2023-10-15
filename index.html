@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Shortcuts</title>
+</head>
+<body>
+    <!-- Added navigation link -->
+    <a href="index.html" style="position: absolute; top: 10px; left: 10px;">Home</a>
+
+    <h1>Keyboard Shortcuts</h1>
+
+    <!-- Text box for filtering -->
+    <input type="text" id="filterInput" oninput="filterTable()" placeholder="Filter shortcuts...">
+
+    <!-- Reference to home.html in an iframe -->
+    <iframe id="keyboardFrame" src="home.html" frameborder="0" width="100%" height="400"></iframe>
+
+    <script>
+        let iframe = document.getElementById("keyboardFrame");
+        let lastFilter = "";
+
+        // Add event listener to capture key press events on the document
+        document.addEventListener("keydown", function (event) {
+            // Check if Shift and P keys are pressed (key codes 16 for Shift and 80 for P)
+            if (event.shiftKey && event.keyCode === 80) {
+                // Focus on the filter input element
+                document.getElementById("filterInput").focus();
+                // Prevent the default action of the "P" key (e.g., printing)
+                event.preventDefault();
+            }
+        });
+
+        function filterTable() {
+            // Get the input element and filter value
+            let input = document.getElementById("filterInput");
+            let filter = input.value.toUpperCase();
+
+            // Check if the filter value has changed
+            if (filter !== lastFilter) {
+                // Send the filter value to the iframe
+                iframe.contentWindow.postMessage(filter, "*");
+                lastFilter = filter;
+            } else if (filter === "") {
+                // If the filter is empty, expand the tables
+                iframe.contentWindow.postMessage(filter, "*");
+                lastFilter = filter;
+            }
+        }
+    </script>
+</body>
+</html>

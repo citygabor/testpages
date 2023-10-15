@@ -1,0 +1,72 @@
+[
+    {
+        "Title":  "",
+        "Path":  "",
+        "FullPath":  "/_index.html",
+        "FileName":  "_index.html",
+        "Tags":  ""
+    },
+    {
+        "Title":  "Confluence keyboard shortcuts",
+        "Path":  "Atlassian",
+        "FullPath":  "Atlassian/ConfluenceWebEnglish.html",
+        "FileName":  "ConfluenceWebEnglish.html",
+        "Tags":  "#Web #Atlassian #Confluence"
+    },
+    {
+        "Title":  "Keyboard shortcuts for Outlook",
+        "Path":  "Microsoft",
+        "FullPath":  "Microsoft/Outlook365WindowsEnglish.html",
+        "FileName":  "Outlook365WindowsEnglish.html",
+        "Tags":  "#Windows #Microsoft #Outlook #English"
+    },
+    {
+        "Title":  "Keyboard shortcuts in Windows",
+        "Path":  "Microsoft",
+        "FullPath":  "Microsoft/Windows11WindowsEnglish.html",
+        "FileName":  "Windows11WindowsEnglish.html",
+        "Tags":  "#Windows #Microsoft #Windows #English"
+    },
+    {
+        "Title":  "Keyboard shortcuts for Access",
+        "Path":  "Microsoft",
+        "FullPath":  "Microsoft/Access365WindowsEnglish.html",
+        "FileName":  "Access365WindowsEnglish.html",
+        "Tags":  "#Windows #Microsoft #Access #English"
+    },
+    {
+        "Title":  "Keyboard shortcuts in Excel",
+        "Path":  "Microsoft",
+        "FullPath":  "Microsoft/Excel365WindowsEnglish.html",
+        "FileName":  "Excel365WindowsEnglish.html",
+        "Tags":  "#Windows #Microsoft #Excel #English"
+    },
+    {
+        "Title":  "Keyboard shortcuts in OneNote",
+        "Path":  "Microsoft",
+        "FullPath":  "Microsoft/OneNote365WindowsEnglish.html",
+        "FileName":  "OneNote365WindowsEnglish.html",
+        "Tags":  "#Windows #Microsoft #OneNote #English"
+    },
+    {
+        "Title":  "Keyboard shortcuts in Microsoft Edge",
+        "Path":  "Microsoft",
+        "FullPath":  "Microsoft/EdgeMacOSEnglish.html",
+        "FileName":  "EdgeMacOSEnglish.html",
+        "Tags":  "#MacOS #Microsoft #Edge #English"
+    },
+    {
+        "Title":  "Keyboard shortcuts in Microsoft Edge",
+        "Path":  "Microsoft",
+        "FullPath":  "Microsoft/EdgeWindowsEnglish.html",
+        "FileName":  "EdgeWindowsEnglish.html",
+        "Tags":  "#Windows #Microsoft #Edge #English"
+    },
+    {
+        "Title":  "Keyboard shortcuts for Access",
+        "Path":  "Microsoft",
+        "FullPath":  "Microsoft/keyboard.html",
+        "FileName":  "keyboard.html",
+        "Tags":  "#Windows #Microsoft #Access #English"
+    }
+]

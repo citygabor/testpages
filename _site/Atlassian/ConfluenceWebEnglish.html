@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Keyboard shortcuts in Confluence - </title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script>
+      // Add event listener to receive messages from the parent window
+      window.addEventListener("message", function (event) {
+          // Check if the event data is a filter value
+          if (event.data && typeof event.data === "string") {
+              var filter = event.data.toUpperCase();
+
+              // Get all tables in this document
+              var tables = document.getElementsByTagName("table");
+
+              // Loop through each table
+              for (var i = 0; i < tables.length; i++) {
+                  var table = tables[i];
+                  var rows = table.getElementsByTagName("tr");
+
+                  // Initialize a variable to track whether to display the table
+                  var displayTable = false;
+
+                  // Loop through each row
+                  for (var j = 0; j < rows.length; j++) {
+                      var row = rows[j];
+                      var cells = row.getElementsByTagName("td");
+
+                      // Initialize a variable to track whether to display the row
+                      var displayRow = false;
+
+                      // Loop through each cell in the row
+                      for (var k = 0; k < cells.length; k++) {
+                          var cell = cells[k];
+                          var cellText = cell.textContent || cell.innerText;
+
+                          // Check if the cell text contains the filter text
+                          if (cellText.toUpperCase().indexOf(filter) > -1) {
+                              displayRow = true;
+                              displayTable = true;
+                              break;
+                          }
+                      }
+
+                      // Set the row's display style based on whether to show or hide it
+                      row.style.display = displayRow ? "" : "none";
+                  }
+
+                  // Set the table's display style based on whether to show or hide it
+                  table.style.display = displayTable ? "" : "none";
+              }
+          }
+      });
+  </script>
+  </head>
+  <body>
+    <h1 id="confluence-keyboard-shortcuts">Confluence keyboard shortcuts</h1>
+
+<h2 id="general">General</h2>
+<h3 id="global-shortcuts">Global Shortcuts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Keyboardshortcut</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Create content</td>
+      <td>c</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Go to dashboard</td>
+      <td>g,  d</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Open Notifications</td>
+      <td>g, n</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Open Recently Viewed</td>
+      <td>g, r</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Browse current space</td>
+      <td>g, s</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Open shortcut help</td>
+      <td> </td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>Quick search</td>
+      <td>g, g</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Quick search</td>
+      <td>/</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Toggle space sidebar</td>
+      <td>[</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Edit</td>
+      <td>e</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Share</td>
+      <td>s</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Next talk (press 2)</td>
+      <td>2</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Previous talk (press 8)</td>
+      <td>8</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="page--blog-post-actions">Page / Blog Post Actions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Keyboard shortcut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Add blog</td>
+      <td>b</td>
+    </tr>
+    <tr>
+      <td>Edit</td>
+      <td>e</td>
+    </tr>
+    <tr>
+      <td>Comment</td>
+      <td>m</td>
+    </tr>
+    <tr>
+      <td>Next Inline Comment</td>
+      <td>n</td>
+    </tr>
+    <tr>
+      <td>Previous Inline Comment</td>
+      <td>p</td>
+    </tr>
+    <tr>
+      <td>Close Inline Comment</td>
+      <td>]</td>
+    </tr>
+    <tr>
+      <td>Watch Page</td>
+      <td>w</td>
+    </tr>
+    <tr>
+      <td>Share</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <td>Edit labels</td>
+      <td>l</td>
+    </tr>
+    <tr>
+      <td>View attachments</td>
+      <td>t</td>
+    </tr>
+    <tr>
+      <td>Favorite page</td>
+      <td>f</td>
+    </tr>
+    <tr>
+      <td>Toggle Talk Sidebar</td>
+      <td>]</td>
+    </tr>
+    <tr>
+      <td>Toggle Talk Adding</td>
+      <td>d</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="editor">Editor</h2>
+
+<h3 id="editor-autoformatting">Editor Autoformatting</h3>
+
+<h4 id="block-formatting">Block Formatting</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Keyboardshortcut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Paragraph</td>
+      <td>Ctrl+0</td>
+    </tr>
+    <tr>
+      <td>Heading 1</td>
+      <td>Ctrl+1</td>
+    </tr>
+    <tr>
+      <td>Heading 6</td>
+      <td>Ctrl+6</td>
+    </tr>
+    <tr>
+      <td>Preformatted</td>
+      <td>Ctrl+7</td>
+    </tr>
+    <tr>
+      <td>Quote</td>
+      <td>Ctrl+8</td>
+    </tr>
+    <tr>
+      <td>Bullet list</td>
+      <td>Ctrl+Shift+B</td>
+    </tr>
+    <tr>
+      <td>Numbered list</td>
+      <td>Ctrl+Shift+N</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rich-formatting">Rich Formatting</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Keyboardshortcut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Files and images</td>
+      <td>Ctrl+M</td>
+    </tr>
+    <tr>
+      <td>Link</td>
+      <td>Ctrl+K</td>
+    </tr>
+    <tr>
+      <td>Insert markup</td>
+      <td>Ctrl+Shift+D</td>
+    </tr>
+    <tr>
+      <td>Macro</td>
+      <td>Ctrl+Shift+A</td>
+    </tr>
+    <tr>
+      <td>Table</td>
+      <td>Ctrl+Shift+I</td>
+    </tr>
+    <tr>
+      <td>Cut row</td>
+      <td>Ctrl+Shift+X</td>
+    </tr>
+    <tr>
+      <td>Copy row</td>
+      <td>Ctrl+Shift+C</td>
+    </tr>
+    <tr>
+      <td>Paste row above</td>
+      <td>Ctrl+Shift+V</td>
+    </tr>
+    <tr>
+      <td>Insert Talk Macro</td>
+      <td>Ctrl+Alt+C</td>
+    </tr>
+    <tr>
+      <td>Insert Talk Suggestion</td>
+      <td>Ctrl+Alt+S</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="editing-actions">Editing Actions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Keyboardshortcut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Preview</td>
+      <td>Ctrl+Shift+E</td>
+    </tr>
+    <tr>
+      <td>Save</td>
+      <td>Ctrl+S</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="editor-autoformatting-1">Editor Autoformatting</h2>
+
+<h3 id="font-formatting">Font Formatting</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Keyboardshortcut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bold text</td>
+      <td><em>Bold</em></td>
+    </tr>
+    <tr>
+      <td>Underline text</td>
+      <td>+Underline+</td>
+    </tr>
+    <tr>
+      <td>Italic text</td>
+      <td><em>Italic</em></td>
+    </tr>
+    <tr>
+      <td>Monospace text</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="autocomplete">Autocomplete</h3>
+
+<p>|Description|Keyboardshortcut|
+|—–|—–|
+|Image/Media|!|
+|Link|[|
+|Macro|{|
+|Tables|first cell                                            |||||| + enter|
+heading heading</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>heading</td>
+      <td> </td>
+      <td>heading</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="styles">Styles</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Heading</td>
+      <td>h1. Heading</td>
+    </tr>
+    <tr>
+      <td>Heading</td>
+      <td>h3. Heading</td>
+    </tr>
+    <tr>
+      <td>Quote</td>
+      <td>bq. Quote</td>
+    </tr>
+    <tr>
+      <td>Emoticons</td>
+      <td>(/)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>:)</p>
+<h3 id="lists">Lists</h3>
+
+<p>|Description|Keyboardshortcut|
+|—–|—–|
+|list|# list|
+|bullets|* bullets|
+|task|[] task|</p>
+<h2 id="tags">Tags</h2>
+<p>#Web</p>
+
+<p>#Atlassian</p>
+
+<p>#Confluence</p>
+
+  </body>
+</html>

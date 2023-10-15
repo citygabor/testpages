@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+
+    <!-- Create a table element to display JSON data -->
+    <table id="data-table" border="1">
+        <thead>
+            <tr>
+                <th>Path</th>
+                <th>FullPath</th>
+                <th>FileName</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        // Function to fetch JSON data from a relative path
+        function fetchJsonData() {
+            fetch('mdFiles.json')
+                .then(response => response.json())
+                .then(data => {
+                    generateTable(data);
+                })
+                .catch(error => console.error('Error fetching JSON: ', error));
+        }
+
+        // Function to populate the table with JSON data
+        function generateTable(jsonData) {
+            var table = document.getElementById("data-table").getElementsByTagName('tbody')[0];
+
+            for (var i = 0; i < jsonData.length; i++) {
+                var row = table.insertRow(i);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+
+                cell1.innerHTML = jsonData[i].Path;
+                cell2.innerHTML = jsonData[i].FullPath;
+                cell3.innerHTML = jsonData[i].FileName;
+                cell4.innerHTML = jsonData[i].Tags;
+            }
+        }
+
+        // Call the function to fetch and display JSON data
+        fetchJsonData();
+    </script>
+</body>
+</html>

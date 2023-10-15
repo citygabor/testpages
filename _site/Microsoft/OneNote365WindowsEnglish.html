@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Keyboard shortcuts in OneNote - </title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script>
+      // Add event listener to receive messages from the parent window
+      window.addEventListener("message", function (event) {
+          // Check if the event data is a filter value
+          if (event.data && typeof event.data === "string") {
+              var filter = event.data.toUpperCase();
+
+              // Get all tables in this document
+              var tables = document.getElementsByTagName("table");
+
+              // Loop through each table
+              for (var i = 0; i < tables.length; i++) {
+                  var table = tables[i];
+                  var rows = table.getElementsByTagName("tr");
+
+                  // Initialize a variable to track whether to display the table
+                  var displayTable = false;
+
+                  // Loop through each row
+                  for (var j = 0; j < rows.length; j++) {
+                      var row = rows[j];
+                      var cells = row.getElementsByTagName("td");
+
+                      // Initialize a variable to track whether to display the row
+                      var displayRow = false;
+
+                      // Loop through each cell in the row
+                      for (var k = 0; k < cells.length; k++) {
+                          var cell = cells[k];
+                          var cellText = cell.textContent || cell.innerText;
+
+                          // Check if the cell text contains the filter text
+                          if (cellText.toUpperCase().indexOf(filter) > -1) {
+                              displayRow = true;
+                              displayTable = true;
+                              break;
+                          }
+                      }
+
+                      // Set the row's display style based on whether to show or hide it
+                      row.style.display = displayRow ? "" : "none";
+                  }
+
+                  // Set the table's display style based on whether to show or hide it
+                  table.style.display = displayTable ? "" : "none";
+              }
+          }
+      });
+  </script>
+  </head>
+  <body>
+    <h1 id="keyboard-shortcuts-in-onenote">Keyboard shortcuts in OneNote</h1>
+
+<h2 id="in-this-topic">In this topic</h2>
+
+<h2 id="frequently-used-shortcuts">Frequently used shortcuts</h2>
+
+<h2 id="format-notes">Format notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Highlight the selected text.</td>
+      <td>Ctrl+Alt+H</td>
+    </tr>
+    <tr>
+      <td>Insert a hyperlink.</td>
+      <td>Ctrl+K</td>
+    </tr>
+    <tr>
+      <td>Copy the formatting of the selected text (<strong>Format Painter</strong>).</td>
+      <td>Ctrl+Shift+C</td>
+    </tr>
+    <tr>
+      <td>Paste the formatting to the selected text (<strong>Format Painter</strong>).</td>
+      <td>Ctrl+Shift+V</td>
+    </tr>
+    <tr>
+      <td>Open a hyperlink.</td>
+      <td>Enter when on the hyperlink text</td>
+    </tr>
+    <tr>
+      <td>Apply or remove bold formatting.</td>
+      <td>Ctrl+B</td>
+    </tr>
+    <tr>
+      <td>Apply or remove italics formatting.</td>
+      <td>Ctrl+I</td>
+    </tr>
+    <tr>
+      <td>Apply or remove underline formatting.</td>
+      <td>Ctrl+U</td>
+    </tr>
+    <tr>
+      <td>Apply or remove strikethrough formatting.</td>
+      <td>Ctrl+Hyphen (-)</td>
+    </tr>
+    <tr>
+      <td>Apply or remove superscript formatting.</td>
+      <td>Ctrl+Shift+Equal sign ( = )</td>
+    </tr>
+    <tr>
+      <td>Apply or remove subscript formatting.</td>
+      <td>Ctrl+Equal sign ( = )</td>
+    </tr>
+    <tr>
+      <td>Apply or remove bulleted list formatting.</td>
+      <td>Ctrl+Period (.)</td>
+    </tr>
+    <tr>
+      <td>Apply or remove numbered list formatting.</td>
+      <td>Ctrl+Forward slash (/)</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 1</strong> style to the current note.</td>
+      <td>Ctrl+Alt+1</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 2</strong> style to the current note.</td>
+      <td>Ctrl+Alt+2</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 3</strong> style to the current note.</td>
+      <td>Ctrl+Alt+3</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 4</strong> style to the current note.</td>
+      <td>Ctrl+Alt+4</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 5</strong> style to the current note.</td>
+      <td>Ctrl+Alt+5</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 6</strong> style to the current note.</td>
+      <td>Ctrl+Alt+6</td>
+    </tr>
+    <tr>
+      <td>Clear all formatting applied to the selected text. (Apply the <strong>Normal</strong> style.)</td>
+      <td>Ctrl+Shift+N</td>
+    </tr>
+    <tr>
+      <td>Increase the paragraph indent.</td>
+      <td>Alt+Shift+Right arrow key or the Tab key when at the beginning of a line</td>
+    </tr>
+    <tr>
+      <td>Decrease the paragraph indent.</td>
+      <td>Alt+Shift+Left arrow key or Shift+Tab when at the beginning of a line</td>
+    </tr>
+    <tr>
+      <td>Align the paragraph to the left.</td>
+      <td>Ctrl+L</td>
+    </tr>
+    <tr>
+      <td>Align the paragraph to the right.</td>
+      <td>Ctrl+R</td>
+    </tr>
+    <tr>
+      <td>Increase the font size of the selected text.</td>
+      <td>Ctrl+Shift+Right angle bracket (&gt;)</td>
+    </tr>
+    <tr>
+      <td>Decrease the font size of the selected text.</td>
+      <td>Ctrl+Shift+Left angle bracket (&lt;)</td>
+    </tr>
+    <tr>
+      <td>Show or hide the rule lines on the current page.</td>
+      <td>Ctrl+Shift+R</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="insert-items-on-a-page">Insert items on a page</h2>
+
+<h2 id="work-with-tables">Work with tables</h2>
+
+<h2 id="select-text-and-objects">Select text and objects</h2>
+
+<h2 id="tag-notes">Tag notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apply, select, or clear the <strong>To Do</strong> tag.</td>
+      <td>Ctrl+1</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Important</strong> tag.</td>
+      <td>Ctrl+2</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Question</strong> tag.</td>
+      <td>Ctrl+3</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Remember for later</strong> tag.</td>
+      <td>Ctrl+4</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Definition</strong> tag.</td>
+      <td>Ctrl+5</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Highlight</strong> tag.</td>
+      <td>Ctrl+6</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Contact</strong> tag.</td>
+      <td>Ctrl+7</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Address</strong> tag.</td>
+      <td>Ctrl+8</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Phone number</strong> tag.</td>
+      <td>Ctrl+9</td>
+    </tr>
+    <tr>
+      <td>Remove all selected note tags.</td>
+      <td>Ctrl+0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="use-outlines">Use outlines</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Collapse the selected outline to <strong>Level 1</strong>.</td>
+      <td>Alt+Shift+1</td>
+    </tr>
+    <tr>
+      <td>Expand an outline to <strong>Level 2</strong>.</td>
+      <td>Alt+Shift+2</td>
+    </tr>
+    <tr>
+      <td>Expand an outline to <strong>Level 3</strong>.</td>
+      <td>Alt+Shift+3</td>
+    </tr>
+    <tr>
+      <td>Expand an outline to <strong>Level 4</strong>.</td>
+      <td>Alt+Shift+4</td>
+    </tr>
+    <tr>
+      <td>Expand an outline to <strong>Level 5</strong>.</td>
+      <td>Alt+Shift+5</td>
+    </tr>
+    <tr>
+      <td>Expand an outline to <strong>Level 6</strong>.</td>
+      <td>Alt+Shift+6</td>
+    </tr>
+    <tr>
+      <td>Expand an outline to <strong>Level 7</strong>.</td>
+      <td>Alt+Shift+7</td>
+    </tr>
+    <tr>
+      <td>Expand an outline to <strong>Level 8</strong>.</td>
+      <td>Alt+Shift+8</td>
+    </tr>
+    <tr>
+      <td>Expand an outline to <strong>Level 9</strong>.</td>
+      <td>Alt+Shift+9</td>
+    </tr>
+    <tr>
+      <td>Expand all levels of an outline.</td>
+      <td>Alt+Shift+0</td>
+    </tr>
+    <tr>
+      <td>Expand the selected heading.</td>
+      <td>Alt+Shift+Equal sign ( = )</td>
+    </tr>
+    <tr>
+      <td>Collapse the selected heading.</td>
+      <td>Alt+Shift+Hyphen (-)</td>
+    </tr>
+    <tr>
+      <td>Increase the indent by one level.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Decrease the indent by one level.</td>
+      <td>Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Expand a selected, collapsed outline.</td>
+      <td>Alt+Shift+Plus sign (+)</td>
+    </tr>
+    <tr>
+      <td>Collapse a selected, expanded outline.</td>
+      <td>Alt+Shift+Minus sign (-)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="specify-language-settings">Specify language settings</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Set writing direction left to right.</td>
+      <td>Ctrl+Left Shift key</td>
+    </tr>
+    <tr>
+      <td>Set writing direction right to left.</td>
+      <td>Ctrl+Right Shift key</td>
+    </tr>
+    <tr>
+      <td>Increase indent by one level in right-to-left text.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Decrease indent by one level in right-to-left text.</td>
+      <td>Shift+Tab</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="work-with-pages">Work with pages</h2>
+
+<h2 id="work-with-notebooks-and-sections">Work with notebooks and sections</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open OneNote.</td>
+      <td>Windows logo key+Shift+N</td>
+    </tr>
+    <tr>
+      <td>Open a notebook.</td>
+      <td>Ctrl+O</td>
+    </tr>
+    <tr>
+      <td>Open a section.</td>
+      <td>Ctrl+Alt+Shift+O</td>
+    </tr>
+    <tr>
+      <td>Create a new section.</td>
+      <td>Ctrl+T</td>
+    </tr>
+    <tr>
+      <td>Go to the next section.</td>
+      <td>Ctrl+Tab</td>
+    </tr>
+    <tr>
+      <td>Go to the previous section.</td>
+      <td>Ctrl+Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Go to the next page in the section.</td>
+      <td>Ctrl+Page down</td>
+    </tr>
+    <tr>
+      <td>Go to the previous page in the section.</td>
+      <td>Ctrl+Page up</td>
+    </tr>
+    <tr>
+      <td>Go to the first page in the section.</td>
+      <td>Alt+Home</td>
+    </tr>
+    <tr>
+      <td>Go to the last page in the section.</td>
+      <td>Alt+End</td>
+    </tr>
+    <tr>
+      <td>Go to the first page in the currently visible set of page tabs.</td>
+      <td>Alt+Page up</td>
+    </tr>
+    <tr>
+      <td>Go to the last page of the currently visible set of page tabs.</td>
+      <td>Alt+Page down</td>
+    </tr>
+    <tr>
+      <td>Move or copy the current page.</td>
+      <td>Ctrl+Alt+M</td>
+    </tr>
+    <tr>
+      <td>Put focus on the current page tab.</td>
+      <td>Ctrl+Alt+G</td>
+    </tr>
+    <tr>
+      <td>Select the current page tab.</td>
+      <td>Ctrl+Shift+A</td>
+    </tr>
+    <tr>
+      <td>Put focus on the current section tab.</td>
+      <td>Ctrl+Shift+G</td>
+    </tr>
+    <tr>
+      <td>Move the current section.</td>
+      <td>Ctrl+Shift+G, and then Shift+F10 or Windows Menu key, M</td>
+    </tr>
+    <tr>
+      <td>Switch to a different notebook on the Navigation bar.</td>
+      <td>Ctrl+G, use the Down or Up arrow key to navigate the sections or use the Tab key to pick a different notebook, then press Enter</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="search-through-notes">Search through notes</h2>
+
+<h2 id="share-notes">Share notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Send the selected pages in an email message.</td>
+      <td>Ctrl+Shift+E</td>
+    </tr>
+    <tr>
+      <td>Create a <strong>Today</strong>  Outlook task from the selected note.</td>
+      <td>Ctrl+Shift+1</td>
+    </tr>
+    <tr>
+      <td>Create a <strong>Tomorrow </strong>Outlook task from the selected note.</td>
+      <td>Ctrl+Shift+2</td>
+    </tr>
+    <tr>
+      <td>Create a <strong>This Week </strong>Outlook task from the selected note.</td>
+      <td>Ctrl+Shift+3</td>
+    </tr>
+    <tr>
+      <td>Create a <strong>Next Week </strong>Outlook task from the selected note.</td>
+      <td>Ctrl+Shift+4</td>
+    </tr>
+    <tr>
+      <td>Create a <strong>No Date </strong>Outlook task from the selected note.</td>
+      <td>Ctrl+Shift+5</td>
+    </tr>
+    <tr>
+      <td>Open the selected Outlook task.</td>
+      <td>Ctrl+Shift+K</td>
+    </tr>
+    <tr>
+      <td>Mark the selected Outlook task as complete.</td>
+      <td>Ctrl+Shift+9</td>
+    </tr>
+    <tr>
+      <td>Delete the selected Outlook task.</td>
+      <td>Ctrl+Shift+0</td>
+    </tr>
+    <tr>
+      <td>Synchronize changes in the current shared notebook.</td>
+      <td>Shift+F9</td>
+    </tr>
+    <tr>
+      <td>Synchronize changes in all shared notebooks.</td>
+      <td>F9</td>
+    </tr>
+    <tr>
+      <td>Mark the current page as <strong>Unread</strong>.</td>
+      <td>Ctrl+Q</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="protect-notes">Protect notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lock all password-protected sections.</td>
+      <td>Ctrl+Alt+L</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="see-also">See also</h2>
+
+<h2 id="in-this-topic-1">In this topic</h2>
+
+<h2 id="frequently-used-shortcuts-1">Frequently used shortcuts</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Put the focus on the current section.</td>
+      <td>Ctrl+Shift+G</td>
+    </tr>
+    <tr>
+      <td>Open the context menu.</td>
+      <td>Shift+F10 or Windows Menu key</td>
+    </tr>
+    <tr>
+      <td>Add a new page at the end of the selected section.</td>
+      <td>Ctrl+N</td>
+    </tr>
+    <tr>
+      <td>Open a notebook.</td>
+      <td>Ctrl+O</td>
+    </tr>
+    <tr>
+      <td>Switch to a different notebook on the <strong>Navigation</strong> bar.</td>
+      <td>Ctrl+G, then the Down or Up arrow key to select a different notebook, and then Enter</td>
+    </tr>
+    <tr>
+      <td>Create a new section.</td>
+      <td>Ctrl+T</td>
+    </tr>
+    <tr>
+      <td>Create a new subpage below the current page.</td>
+      <td>Ctrl+Alt+Shift+N</td>
+    </tr>
+    <tr>
+      <td>Enable or disable the full-page view.</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <td>Put the focus on the current page tab.</td>
+      <td>Ctrl+Alt+G</td>
+    </tr>
+    <tr>
+      <td>Move or copy the current page.</td>
+      <td>Ctrl+Alt+M</td>
+    </tr>
+    <tr>
+      <td>Select the current page.</td>
+      <td>Ctrl+Shift+A</td>
+    </tr>
+    <tr>
+      <td>Jump to and select the page title.</td>
+      <td>Ctrl+Shift+T</td>
+    </tr>
+    <tr>
+      <td>Open a search box to search all currently open notebooks.</td>
+      <td>Ctrl+E</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="navigate-onenote-for-windows-10with-only-the-keyboard">Navigate OneNote for Windows 10 with only the keyboard</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jump between the ribbon tab bar, navigation pane, and the page canvas.</td>
+      <td>F6</td>
+    </tr>
+    <tr>
+      <td>Move to the ribbon from a ribbon tab.</td>
+      <td>Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Move between ribbon tabs, or among the options on a ribbon.</td>
+      <td>Left or Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Perform the currently selected ribbon command.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Move between the items on the main menu bar.</td>
+      <td>Tab key or Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Move the focus to and open the ribbon.</td>
+      <td>Alt</td>
+    </tr>
+    <tr>
+      <td>Move the focus to and open the <strong>Home</strong> ribbon tab.</td>
+      <td>Alt+H</td>
+    </tr>
+    <tr>
+      <td>Move the focus to and open the <strong>Insert</strong> ribbon tab.</td>
+      <td>Alt+N</td>
+    </tr>
+    <tr>
+      <td>Move the focus to and open the <strong>Draw</strong> ribbon tab.</td>
+      <td>Alt+D</td>
+    </tr>
+    <tr>
+      <td>Move the focus to and open the <strong>View</strong> ribbon tab.</td>
+      <td>Alt+W</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="type-and-edit-notes">Type and edit notes</h2>
+
+<h2 id="format-notes-1">Format notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Highlight the selected text.</td>
+      <td>Ctrl+Shift+H or Ctrl+Alt+H</td>
+    </tr>
+    <tr>
+      <td>Insert a hyperlink.</td>
+      <td>Ctrl+K</td>
+    </tr>
+    <tr>
+      <td>Copy the formatting of the selected text (<strong>Format Painter</strong>).</td>
+      <td>Ctrl+Shift+C</td>
+    </tr>
+    <tr>
+      <td>Paste the formatting to the selected text (<strong>Format Painter</strong>).</td>
+      <td>Ctrl+Shift+V</td>
+    </tr>
+    <tr>
+      <td>Open a hyperlink.</td>
+      <td>Enter when on the hyperlink text</td>
+    </tr>
+    <tr>
+      <td>Apply or remove bold formatting.</td>
+      <td>Ctrl+B</td>
+    </tr>
+    <tr>
+      <td>Apply or remove italics formatting.</td>
+      <td>Ctrl+I</td>
+    </tr>
+    <tr>
+      <td>Apply or remove underline formatting.</td>
+      <td>Ctrl+U</td>
+    </tr>
+    <tr>
+      <td>Apply or remove strikethrough formatting.</td>
+      <td>Ctrl+Hyphen (-)</td>
+    </tr>
+    <tr>
+      <td>Apply or remove superscript formatting.</td>
+      <td>Ctrl+Shift+Equal sign ( = )</td>
+    </tr>
+    <tr>
+      <td>Apply or remove subscript formatting.</td>
+      <td>Ctrl+Equal sign ( = )</td>
+    </tr>
+    <tr>
+      <td>Apply or remove bulleted list formatting.</td>
+      <td>Ctrl+Period (.)</td>
+    </tr>
+    <tr>
+      <td>Apply or remove numbered list formatting.</td>
+      <td>Ctrl+Forward slash (/)</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 1</strong> style to the current note.</td>
+      <td>Ctrl+Alt+1</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 2</strong> style to the current note.</td>
+      <td>Ctrl+Alt+2</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 3</strong> style to the current note.</td>
+      <td>Ctrl+Alt+3</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 4</strong> style to the current note.</td>
+      <td>Ctrl+Alt+4</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 5</strong> style to the current note.</td>
+      <td>Ctrl+Alt+5</td>
+    </tr>
+    <tr>
+      <td>Apply a <strong>Heading 6</strong> style to the current note.</td>
+      <td>Ctrl+Alt+6</td>
+    </tr>
+    <tr>
+      <td>Clear all formatting applied to the selected text. (Apply the <strong>Normal</strong> style.)</td>
+      <td>Ctrl+Shift+N</td>
+    </tr>
+    <tr>
+      <td>Increase the paragraph indent.</td>
+      <td>Alt+Shift+Right arrow key or the Tab key when at the beginning of a line</td>
+    </tr>
+    <tr>
+      <td>Decrease the paragraph indent.</td>
+      <td>Alt+Shift+Left arrow key or Shift+Tab when at the beginning of a line</td>
+    </tr>
+    <tr>
+      <td>Right-align the selected paragraph.</td>
+      <td>Ctrl+R</td>
+    </tr>
+    <tr>
+      <td>Left-align the selected paragraph.</td>
+      <td>Ctrl+L</td>
+    </tr>
+    <tr>
+      <td>Increase the font size of the selected text.</td>
+      <td>Ctrl+Shift+Right angle bracket (&gt;)</td>
+    </tr>
+    <tr>
+      <td>Decrease the font size of the selected text.</td>
+      <td>Ctrl+Shift+Left angle bracket (&lt;)</td>
+    </tr>
+    <tr>
+      <td>Show or hide the rule lines on the current page.</td>
+      <td>Ctrl+Shift+R</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="add-items-to-a-page">Add items to a page</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Copy a screen clipping to the clipboard (requires the Windows 10 Creators Update).</td>
+      <td>Windows logo key+Shift+S</td>
+    </tr>
+    <tr>
+      <td>Insert the current date.</td>
+      <td>Alt+Shift+D</td>
+    </tr>
+    <tr>
+      <td>Insert the current date and time.</td>
+      <td>Alt+Shift+F</td>
+    </tr>
+    <tr>
+      <td>Insert the current time.</td>
+      <td>Alt+Shift+T</td>
+    </tr>
+    <tr>
+      <td>Insert a line break.</td>
+      <td>Shift+Enter</td>
+    </tr>
+    <tr>
+      <td>Start a math equation or convert the selected text to a math equation.</td>
+      <td>Alt+Equal sign ( = )</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="work-with-tables-1">Work with tables</h2>
+
+<h2 id="select-notes-and-objects">Select notes and objects</h2>
+
+<h2 id="tag-notes-1">Tag notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apply, select, or clear the <strong>To Do</strong> tag.</td>
+      <td>Ctrl+1</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Important</strong> tag.</td>
+      <td>Ctrl+2</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Question</strong> tag.</td>
+      <td>Ctrl+3</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Remember for later</strong> tag.</td>
+      <td>Ctrl+4</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Definition</strong> tag.</td>
+      <td>Ctrl+5</td>
+    </tr>
+    <tr>
+      <td>Remove all note tags from the selected notes.</td>
+      <td>Ctrl+0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="use-outlines-1">Use outlines</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Show through <strong>Level 1</strong>.</td>
+      <td>Alt+Shift+1</td>
+    </tr>
+    <tr>
+      <td>Expand to <strong>Level 2</strong>.</td>
+      <td>Alt+Shift+2</td>
+    </tr>
+    <tr>
+      <td>Expand to <strong>Level 3</strong>.</td>
+      <td>Alt+Shift+3</td>
+    </tr>
+    <tr>
+      <td>Expand to <strong>Level 4</strong>.</td>
+      <td>Alt+Shift+4</td>
+    </tr>
+    <tr>
+      <td>Expand to <strong>Level 5</strong>.</td>
+      <td>Alt+Shift+5</td>
+    </tr>
+    <tr>
+      <td>Expand to <strong>Level 6</strong>.</td>
+      <td>Alt+Shift+6</td>
+    </tr>
+    <tr>
+      <td>Expand to <strong>Level 7</strong>.</td>
+      <td>Alt+Shift+7</td>
+    </tr>
+    <tr>
+      <td>Expand to <strong>Level 8</strong>.</td>
+      <td>Alt+Shift+8</td>
+    </tr>
+    <tr>
+      <td>Expand to <strong>Level 9</strong>.</td>
+      <td>Alt+Shift+9</td>
+    </tr>
+    <tr>
+      <td>Expand all levels.</td>
+      <td>Alt+Shift+0</td>
+    </tr>
+    <tr>
+      <td>Increase the indent by one level.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Decrease the indent by one level.</td>
+      <td>Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Expand a collapsed outline.</td>
+      <td>Alt+Shift+Plus sign (+)</td>
+    </tr>
+    <tr>
+      <td>Collapse an expanded outline.</td>
+      <td>Alt+Shift+Minus sign (–)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="specify-language-settings-1">Specify language settings</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Set the writing direction left-to-right.</td>
+      <td>Ctrl+Left Shift key</td>
+    </tr>
+    <tr>
+      <td>Set the writing direction right-to-left.</td>
+      <td>Ctrl+Right Shift key</td>
+    </tr>
+    <tr>
+      <td>Increase indent by one level in right-to-left text.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Decrease indent by one level in right-to-left text.</td>
+      <td>Shift+Tab</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="work-with-pages-1">Work with pages</h2>
+
+<h2 id="work-with-notebooks-and-sections-1">Work with notebooks and sections</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open a notebook.</td>
+      <td>Ctrl+O</td>
+    </tr>
+    <tr>
+      <td>Create a new section.</td>
+      <td>Ctrl+T</td>
+    </tr>
+    <tr>
+      <td>Go to the next section.</td>
+      <td>Ctrl+Tab</td>
+    </tr>
+    <tr>
+      <td>Go to the previous section.</td>
+      <td>Ctrl+Shift+Tab</td>
+    </tr>
+    <tr>
+      <td>Go to the next page in the section.</td>
+      <td>Ctrl+Page down</td>
+    </tr>
+    <tr>
+      <td>Go to the previous page in the section.</td>
+      <td>Ctrl+Page up</td>
+    </tr>
+    <tr>
+      <td>Go to the first page in the section.</td>
+      <td>Alt+Home</td>
+    </tr>
+    <tr>
+      <td>Go to the last page in the section.</td>
+      <td>Alt+End</td>
+    </tr>
+    <tr>
+      <td>Move or copy the current page.</td>
+      <td>Ctrl+Alt+M</td>
+    </tr>
+    <tr>
+      <td>Put focus on the current page tab.</td>
+      <td>Ctrl+Alt+G</td>
+    </tr>
+    <tr>
+      <td>Put focus on the current section tab.</td>
+      <td>Ctrl+Shift+G</td>
+    </tr>
+    <tr>
+      <td>Switch to a different notebook on the <strong>Navigation</strong> bar.</td>
+      <td>Ctrl+G, then the Down or Up arrow key to select a different notebook, and then Enter</td>
+    </tr>
+    <tr>
+      <td>Open the context menu for the current section.</td>
+      <td>Ctrl+Shift+G, and then Shift+F10 or Windows Menu key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="search-notes">Search notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open a search box to search all currently open notebooks.</td>
+      <td>Ctrl+E</td>
+    </tr>
+    <tr>
+      <td>Open a search box to search the current page.</td>
+      <td>Ctrl+F</td>
+    </tr>
+    <tr>
+      <td>While searching all notebooks, preview the next result.</td>
+      <td>Down arrow key</td>
+    </tr>
+    <tr>
+      <td>While searching all notebooks, go to the selected result.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Change the search scope.</td>
+      <td>Ctrl+E, Tab key twice, then the Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Dismiss the search and return to the page.</td>
+      <td>Esc</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="share-notes-1">Share notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open the <strong>Send link</strong> dialog box.</td>
+      <td>Ctrl+Shift+E</td>
+    </tr>
+    <tr>
+      <td>Synchronize the current notebook.</td>
+      <td>Ctrl+S or Shift+F9</td>
+    </tr>
+    <tr>
+      <td>Synchronize all notebooks.</td>
+      <td>F9</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="protect-notes-1">Protect notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lock all password-protected sections.</td>
+      <td>Ctrl+Alt+L</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="see-also-1">See also</h2>
+
+<h2 id="in-this-topic-2">In this topic</h2>
+
+<h2 id="enable-full-keyboard-access">Enable full keyboard access</h2>
+
+<h2 id="frequently-used-shortcuts-2">Frequently used shortcuts</h2>
+
+<h2 id="navigate-within-pages">Navigate within pages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move one word to the left.</td>
+      <td>Option+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move one word to the right.</td>
+      <td>Option+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the beginning of the line.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move to the end of the line.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move up one paragraph.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Up arrow key or Option+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move down one paragraph.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Down arrow key or Option+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Scroll up in the current page.</td>
+      <td>Page up</td>
+    </tr>
+    <tr>
+      <td>Scroll down in the current page.</td>
+      <td>Page down</td>
+    </tr>
+    <tr>
+      <td>Move the cursor up in the current outline.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Option+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the title of the current page.</td>
+      <td><img src="https://support.content.office.net/en-us/media/314f2d55-e8b8-4417-9d4b-b3908c1ebd0c.gif" alt="The Command button." />+Shift+T</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="edit-text-and-graphics">Edit text and graphics</h2>
+
+<h2 id="work-with-tables-2">Work with tables</h2>
+
+<h2 id="work-with-notebooks-and-sections-2">Work with notebooks and sections</h2>
+
+<h2 id="see-also-2">See also</h2>
+
+<h2 id="in-this-topic-3">In this topic</h2>
+
+<h2 id="navigate-the-ribbon-and-panes-in-viewing-mode">Navigate the ribbon and panes in Viewing mode</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jump from the notebook navigation to the browser fields.</td>
+      <td>Shift+F6</td>
+    </tr>
+    <tr>
+      <td>Move among ribbon commands.</td>
+      <td>Tab key</td>
+    </tr>
+    <tr>
+      <td>Perform the currently selected ribbon command.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Scroll up or down on a page.</td>
+      <td>Page up or Page down</td>
+    </tr>
+    <tr>
+      <td>Page forward through the notebook</td>
+      <td>Ctrl+Page down</td>
+    </tr>
+    <tr>
+      <td>Page backward through the notebook.</td>
+      <td>Ctrl+Page up</td>
+    </tr>
+    <tr>
+      <td>Go to the first page in a section.</td>
+      <td>Alt+Page up</td>
+    </tr>
+    <tr>
+      <td>Go to the last page in a section.</td>
+      <td>Alt+Page down</td>
+    </tr>
+    <tr>
+      <td>Expand the selected section.</td>
+      <td>Enter, when on the section</td>
+    </tr>
+    <tr>
+      <td>Display the access keys (ribbon commands) on the classic ribbon when using Narrator.</td>
+      <td>Alt+Period (.)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="navigate-the-ribbon-and-panes-in-editing-mode">Navigate the ribbon and panes in Editing mode</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open a specific page.</td>
+      <td>Ctrl+F6 until the focus is on the navigation bar with current notebook selected, then the Tab key until the focus is on the page navigation pane, then the Down or Up arrow key to put focus on different pages, and then Enter to select a page</td>
+    </tr>
+    <tr>
+      <td>Activate a different ribbon tab.</td>
+      <td>Ctrl+F6 until you reach the row of ribbon tabs, and then the Right or Left arrow key to move among the ribbon tabs. The focused ribbon is displayed automatically. </td>
+    </tr>
+    <tr>
+      <td>Move among ribbon commands.</td>
+      <td>Tab key to move the focus from the row of ribbon tabs to the ribbon, then the Right or Left arrow key when on the ribbon</td>
+    </tr>
+    <tr>
+      <td>Activate the selected ribbon command.</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>Go to the first page in a section.</td>
+      <td>Alt+Page up</td>
+    </tr>
+    <tr>
+      <td>Go to the last page in a section.</td>
+      <td>Alt+Page down</td>
+    </tr>
+    <tr>
+      <td>Move the current page up or down.</td>
+      <td>Alt+Shift+Up or Down arrow key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="navigate-within-pages-1">Navigate within pages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Move the cursor from the title area to the page body.</td>
+      <td>Tab key or Enter</td>
+    </tr>
+    <tr>
+      <td>Move the cursor one word to the right.</td>
+      <td>Ctrl+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor one word to the left.</td>
+      <td>Ctrl+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor up by one paragraph.</td>
+      <td>Ctrl+Up arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor down by one paragraph.</td>
+      <td>Ctrl+Down arrow key</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the beginning of the line.</td>
+      <td>Home</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the end of the line.</td>
+      <td>End</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the beginning of the page outline.</td>
+      <td>Ctrl+Home</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the end of the page outline.</td>
+      <td>Ctrl+End</td>
+    </tr>
+    <tr>
+      <td>Move the cursor to the title area.</td>
+      <td>Page up, or Ctrl+A and then the Tab key until the title is selected</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="select-text-and-graphics">Select text and graphics</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Select text.</td>
+      <td>Shift+Arrow keys</td>
+    </tr>
+    <tr>
+      <td>Select the word to the right.</td>
+      <td>Ctrl+Shift+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Select the word to the left.</td>
+      <td>Ctrl+Shift+Left arrow key</td>
+    </tr>
+    <tr>
+      <td>Select from the current position to the beginning of the paragraph.</td>
+      <td>Shift+Home</td>
+    </tr>
+    <tr>
+      <td>Select from the current position to the end of the paragraph.</td>
+      <td>Shift+End</td>
+    </tr>
+    <tr>
+      <td>Select from the current position to the beginning of the outline.</td>
+      <td>Shift+Ctrl+Home</td>
+    </tr>
+    <tr>
+      <td>Select from the current position to the end of the outline.</td>
+      <td>Shift+Ctrl+End</td>
+    </tr>
+    <tr>
+      <td>Expand the selection.</td>
+      <td>Ctrl+A to expand the selection to the entire paragraph, outline, and page.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="edit-content">Edit content</h2>
+
+<h2 id="work-with-tables-3">Work with tables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Create a table.</td>
+      <td>Tab key after typing a new line of text</td>
+    </tr>
+    <tr>
+      <td>Create a new cell.</td>
+      <td>Tab key when in the last cell of the table</td>
+    </tr>
+    <tr>
+      <td>Insert a row below the current row.</td>
+      <td>Ctrl+Enter when in a table cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="format-text">Format text</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apply bold formatting.</td>
+      <td>Ctrl+B</td>
+    </tr>
+    <tr>
+      <td>Apply italics formatting.</td>
+      <td>Ctrl+I</td>
+    </tr>
+    <tr>
+      <td>Apply underline formatting.</td>
+      <td>Ctrl+U</td>
+    </tr>
+    <tr>
+      <td>Create a bulleted list.</td>
+      <td>Ctrl+Period (.)</td>
+    </tr>
+    <tr>
+      <td>Create a numbered list.</td>
+      <td>Ctrl+Forward slash (/) or Ctrl+Shift+O</td>
+    </tr>
+    <tr>
+      <td>Align the paragraph to the left.</td>
+      <td>Ctrl+L</td>
+    </tr>
+    <tr>
+      <td>Align the paragraph to the right.</td>
+      <td>Ctrl+R</td>
+    </tr>
+    <tr>
+      <td>Increase the paragraph indent.</td>
+      <td>Alt+Shift+Right arrow key</td>
+    </tr>
+    <tr>
+      <td>Decrease the paragraph indent.</td>
+      <td>Alt+Shift+Left arrow key</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="tag-notes-2">Tag notes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To do this</th>
+      <th>Press</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apply, select, or clear the <strong>To Do</strong> tag.</td>
+      <td>Ctrl+1</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Important</strong> tag.</td>
+      <td>Ctrl+2</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Question</strong> tag.</td>
+      <td>Ctrl+3</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Remember for later</strong> tag.</td>
+      <td>Ctrl+4</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Definition</strong> tag.</td>
+      <td>Ctrl+5</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Highlight</strong> tag.</td>
+      <td>Ctrl+6</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Contact</strong> tag.</td>
+      <td>Ctrl+7</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Address</strong> tag.</td>
+      <td>Ctrl+8</td>
+    </tr>
+    <tr>
+      <td>Apply or clear the <strong>Phone Number</strong> tag.</td>
+      <td>Ctrl+9</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="need-more-help">Need more help?</h3>
+<h2 id="was-this-information-helpful">Was this information helpful?</h2>
+
+<h2 id="reference-links">Reference links</h2>
+
+<p><a href="https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-onenote-44b8b3f4-c274-4bcc-a089-e80fdcc87950">Keyboard shortcuts in OneNote</a></p>
+
+<h2 id="tags">Tags</h2>
+
+<p>#Windows</p>
+
+<p>#Microsoft</p>
+
+<p>#OneNote 365</p>
+
+<p>#English</p>
+
+  </body>
+</html>

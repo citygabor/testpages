@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Keyboard shortcuts in Microsoft Edge - </title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script>
+      // Add event listener to receive messages from the parent window
+      window.addEventListener("message", function (event) {
+          // Check if the event data is a filter value
+          if (event.data && typeof event.data === "string") {
+              var filter = event.data.toUpperCase();
+
+              // Get all tables in this document
+              var tables = document.getElementsByTagName("table");
+
+              // Loop through each table
+              for (var i = 0; i < tables.length; i++) {
+                  var table = tables[i];
+                  var rows = table.getElementsByTagName("tr");
+
+                  // Initialize a variable to track whether to display the table
+                  var displayTable = false;
+
+                  // Loop through each row
+                  for (var j = 0; j < rows.length; j++) {
+                      var row = rows[j];
+                      var cells = row.getElementsByTagName("td");
+
+                      // Initialize a variable to track whether to display the row
+                      var displayRow = false;
+
+                      // Loop through each cell in the row
+                      for (var k = 0; k < cells.length; k++) {
+                          var cell = cells[k];
+                          var cellText = cell.textContent || cell.innerText;
+
+                          // Check if the cell text contains the filter text
+                          if (cellText.toUpperCase().indexOf(filter) > -1) {
+                              displayRow = true;
+                              displayTable = true;
+                              break;
+                          }
+                      }
+
+                      // Set the row's display style based on whether to show or hide it
+                      row.style.display = displayRow ? "" : "none";
+                  }
+
+                  // Set the table's display style based on whether to show or hide it
+                  table.style.display = displayTable ? "" : "none";
+              }
+          }
+      });
+  </script>
+  </head>
+  <body>
+    <h1 id="keyboard-shortcuts-in-microsoft-edge">Keyboard shortcuts in Microsoft Edge</h1>
+
+<p>| <strong>Press this key</strong>                 | <strong>To do this</strong>                                                                 |
+|————————————|——————————————————————————–|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Press this key</strong></th>
+      <th><strong>To do this</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>B</strong></td>
+      <td>Show or hide the favorites bar</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>C</strong></td>
+      <td>Open Developer tools</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>D</strong></td>
+      <td>Save your current tab as a favorite</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>D</strong></td>
+      <td>Save all open tabs as favorites in a new folder</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>E</strong></td>
+      <td>Open search in sidebar</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>F</strong></td>
+      <td>Open find on page</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Ctrl </strong>+ <strong>F</strong></td>
+      <td>Turn full-screen mode on or off</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Option</strong> + <strong>F</strong></td>
+      <td>Search the web</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>G</strong></td>
+      <td>Jump to the next result for find on page</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>G</strong></td>
+      <td>Jump to the previous result for find on page</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>H</strong></td>
+      <td>Open your home page in the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Option</strong> + <strong>J</strong></td>
+      <td>Open the JavaScript Console</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>L</strong></td>
+      <td>Select the URL in the address bar to edit</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Option</strong> + <strong>L</strong></td>
+      <td>Open Downloads </td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>M</strong></td>
+      <td>Toggle tab mute on and off</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>M</strong></td>
+      <td>Minimize window</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Option</strong> + <strong>M</strong></td>
+      <td>Minimize all windows of the front app</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>M</strong></td>
+      <td>Log in a different user or browse as a guest</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>N</strong></td>
+      <td>Open a new window</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>N</strong></td>
+      <td>Open a new window in InPrivate mode</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>O</strong></td>
+      <td>Open a file from your computer in Edge</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>P</strong></td>
+      <td>Print the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Q</strong></td>
+      <td>Quit</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>R</strong></td>
+      <td>Reload the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>R</strong></td>
+      <td>Reload the current tab, ignoring cached content</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>S</strong></td>
+      <td>Save the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>T</strong></td>
+      <td>Open a new tab, and switch to it</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>T</strong></td>
+      <td>Reopen the last closed tab, and switch to it</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>U</strong></td>
+      <td>Start or stop Read Aloud</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>V</strong></td>
+      <td>Paste format free text</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>W</strong></td>
+      <td>Close the current tab</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>W</strong></td>
+      <td>Close the current window</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Y</strong></td>
+      <td>Open History </td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>0</strong> (zero)</td>
+      <td>Reset zoom level</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>1</strong>, <strong>2</strong>, … <strong>8</strong></td>
+      <td>Switch to a specific tab</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>9</strong></td>
+      <td>Switch to the last tab</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Left arrow</strong></td>
+      <td>Move cursor to the beginning of first word in the same line</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Right arrow</strong></td>
+      <td>Move cursor to the end of last word in the same line</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Delete</strong></td>
+      <td>Delete the entire text field / entire line of text</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Return</strong></td>
+      <td>Search the typed query in new tab</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Shift</strong> + <strong>Delete</strong></td>
+      <td>Open clear browsing data options</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Plus</strong> (<strong>+</strong>)</td>
+      <td>Zoom in</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>Minus</strong> (<strong>-</strong>)</td>
+      <td>Zoom out</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>\</strong> (in a PDF)</td>
+      <td>Toggle PDF between fit to page / fit to width</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>[</strong> (in a PDF)</td>
+      <td>Rotate PDF counter-clockwise 90*</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>]</strong> (in a PDF)</td>
+      <td>Rotate PDF clockwise 90*</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>[</strong></td>
+      <td>Navigate backward</td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong> + <strong>]</strong></td>
+      <td>Navigate forward</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Fn</strong> + <strong>Down arrow</strong></td>
+      <td>Switch to the next tab</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl</strong> + <strong>Fn</strong> + <strong>Up arrow</strong></td>
+      <td>Switch to the previous tab</td>
+    </tr>
+    <tr>
+      <td><strong>F9</strong></td>
+      <td>Enter or exit Immersive Reader</td>
+    </tr>
+    <tr>
+      <td><strong>F12</strong></td>
+      <td>Open Developer Tools (toggle)</td>
+    </tr>
+    <tr>
+      <td><strong>ESC</strong> (in full-screen mode)</td>
+      <td>Exit full-screen mode</td>
+    </tr>
+    <tr>
+      <td><strong>ESC</strong></td>
+      <td>Stop loading page; close dialog or pop-up</td>
+    </tr>
+    <tr>
+      <td><strong>Space</strong></td>
+      <td>Scroll down webpage, one screen at a time</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong> + <strong>Space</strong></td>
+      <td>Scroll up webpage, one screen at a time</td>
+    </tr>
+    <tr>
+      <td><strong>Tab</strong></td>
+      <td>Move to the next control</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong> + <strong>Tab</strong></td>
+      <td>Move to the previous control</td>
+    </tr>
+    <tr>
+      <td><strong>Ctrl </strong>+ <strong>Tab</strong></td>
+      <td>Go to the next tab</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong> + <strong>Ctrl </strong>+ <strong>Tab</strong></td>
+      <td>Go to the previous tab</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="reference-links">Reference links</h2>
+
+<p><a href="https://support.microsoft.com/en-us/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad">Keyboard shortcuts in Microsoft Edge</a></p>
+
+<h2 id="tags">Tags</h2>
+
+<p>#MacOS</p>
+
+<p>#Microsoft</p>
+
+<p>#Edge</p>
+
+<p>#English</p>
+
+  </body>
+</html>

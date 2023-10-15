@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title> - </title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script>
+      // Add event listener to receive messages from the parent window
+      window.addEventListener("message", function (event) {
+          // Check if the event data is a filter value
+          if (event.data && typeof event.data === "string") {
+              var filter = event.data.toUpperCase();
+
+              // Get all tables in this document
+              var tables = document.getElementsByTagName("table");
+
+              // Loop through each table
+              for (var i = 0; i < tables.length; i++) {
+                  var table = tables[i];
+                  var rows = table.getElementsByTagName("tr");
+
+                  // Initialize a variable to track whether to display the table
+                  var displayTable = false;
+
+                  // Loop through each row
+                  for (var j = 0; j < rows.length; j++) {
+                      var row = rows[j];
+                      var cells = row.getElementsByTagName("td");
+
+                      // Initialize a variable to track whether to display the row
+                      var displayRow = false;
+
+                      // Loop through each cell in the row
+                      for (var k = 0; k < cells.length; k++) {
+                          var cell = cells[k];
+                          var cellText = cell.textContent || cell.innerText;
+
+                          // Check if the cell text contains the filter text
+                          if (cellText.toUpperCase().indexOf(filter) > -1) {
+                              displayRow = true;
+                              displayTable = true;
+                              break;
+                          }
+                      }
+
+                      // Set the row's display style based on whether to show or hide it
+                      row.style.display = displayRow ? "" : "none";
+                  }
+
+                  // Set the table's display style based on whether to show or hide it
+                  table.style.display = displayTable ? "" : "none";
+              }
+          }
+      });
+  </script>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Markdown Files</title>
+</head>
+<body>
+    <h1>Markdown Files</h1>
+
+    <!-- Create a table element to display JSON data -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Path</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td><a href="//_index.html"></a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td><a href="/Atlassian/ConfluenceWebEnglish.html">Confluence keyboard shortcuts</a></td>
+                    <td>Atlassian</td>
+                    <td>#Web #Atlassian #Confluence</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="/Microsoft/Outlook365WindowsEnglish.html">Keyboard shortcuts for Outlook</a></td>
+                    <td>Microsoft</td>
+                    <td>#Windows #Microsoft #Outlook #English</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="/Microsoft/Windows11WindowsEnglish.html">Keyboard shortcuts in Windows</a></td>
+                    <td>Microsoft</td>
+                    <td>#Windows #Microsoft #Windows #English</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="/Microsoft/Access365WindowsEnglish.html">Keyboard shortcuts for Access</a></td>
+                    <td>Microsoft</td>
+                    <td>#Windows #Microsoft #Access #English</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="/Microsoft/Excel365WindowsEnglish.html">Keyboard shortcuts in Excel</a></td>
+                    <td>Microsoft</td>
+                    <td>#Windows #Microsoft #Excel #English</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="/Microsoft/OneNote365WindowsEnglish.html">Keyboard shortcuts in OneNote</a></td>
+                    <td>Microsoft</td>
+                    <td>#Windows #Microsoft #OneNote #English</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="/Microsoft/EdgeMacOSEnglish.html">Keyboard shortcuts in Microsoft Edge</a></td>
+                    <td>Microsoft</td>
+                    <td>#MacOS #Microsoft #Edge #English</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="/Microsoft/EdgeWindowsEnglish.html">Keyboard shortcuts in Microsoft Edge</a></td>
+                    <td>Microsoft</td>
+                    <td>#Windows #Microsoft #Edge #English</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="//"></a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            
+        </tbody>
+    </table>
+
+</body>
+</html>
+
+  </body>
+</html>

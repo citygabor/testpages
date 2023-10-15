@@ -1,0 +1,417 @@
+---
+layout: default
+title: Keyboard shortcuts for Access New"
+---
+
+# Keyboard shortcuts for Access
+
+## In this topic
+
+## Frequently used shortcuts
+
+## Navigate the ribbon with only the keyboard
+
+| To do this                               | Press             |
+|-----|-----|
+|------------------------------------------|-------------------|
+| Go to the **File** menu.                 | Alt+F             |
+| Go to the **Home** tab.                  | Alt+H             |
+| Go to the **Create** tab.                | Alt+C             |
+| Go to the **External Data** tab.         | Alt+X or Alt+X, 1 |
+| Go to the **Database Tools** tab.        | Alt+Y, 2          |
+| Go to the **Table** tab.                 | Alt+J, T          |
+| Go to the **Add-ins** tab, if present.   | Alt+X, 2          |
+| Go to the **Tell me** box on the ribbon. | Alt+Q             |
+
+### Use the keyboard to work with ribbon tabs
+
+## Work with database files
+
+### Open and save databases
+
+| To do this                                                            | Press                             |
+|-----------------------------------------------------------------------|-----------------------------------|
+| Open a new database.                                                  | Ctrl+N                            |
+| Open an existing database.                                            | Ctrl+O or Ctrl+F12                |
+| Open the selected folder or file.                                     | Enter                             |
+| Open the folder one level above the selected folder.                  | Backspace                         |
+| Delete the selected folder or file.                                   | Delete                            |
+| Display a shortcut menu for a selected item such as a folder or file. | Shift+F10 or the Windows Menu key |
+| Move forward through options.                                         | Tab key                           |
+| Move backward through options.                                        | Shift+Tab                         |
+| Open the **Look in** list.                                            | F4 or Alt+I                       |
+| Save a database object.                                               | Ctrl+S or Shift+F12               |
+| Open the **Save As** dialog box.                                      | F12 or Alt+F, S                   |
+
+### Print database information
+
+| To do this                                                  | Press       |
+|-------------------------------------------------------------|-------------|
+| Print the current or selected object.                       | Ctrl+P      |
+| From **Print Preview**, open the **Print** dialog box.      | P or Ctrl+P |
+| From **Print Preview**, open the **Page Setup** dialog box. | S           |
+| Cancel **Print Preview** or **Layout Preview**.             | C or Esc    |
+| From the **File** menu, return to your database.            | Esc         |
+
+## Navigate in the Access workspace
+
+### Switch from tabbed documents to windowed documents
+
+### Move in the Access workspace
+## Work with menus, dialog boxes, wizards, and property sheets
+
+### Use menus
+
+| To do this                                                                                                        | Press                             |
+|-------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| Show KeyTips.                                                                                                     | Alt or F10                        |
+| Show the program icon menu (on the program title bar), also known as the control menu.                            | Alt+Spacebar                      |
+| With the menu or submenu visible, select the next or previous command.                                            | Down or Up arrow key              |
+| Select the menu to the left or right or, when a submenu is visible, switch between the main menu and the submenu. | Left or Right arrow key           |
+| Select the first or last command on the menu or submenu.                                                          | Home or End                       |
+| Open the selected menu, or perform the action assigned to the selected button.                                    | Spacebar or Enter                 |
+| Open a shortcut menu or open a dropdown menu for the selected gallery item.                                       | Shift+F10 or the Windows Menu key |
+| Scroll up or down in the selected gallery list.                                                                   | Page up or Page down              |
+| Move to the top or bottom of the selected gallery list.                                                           | Ctrl+Home or Ctrl+End             |
+| Close the visible menu and submenu at the same time.                                                              | Alt                               |
+| Close the visible menu or, with a submenu visible, close only the submenu.                                        | Esc                               |
+
+### Use dialog boxes
+
+|-------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| Switch to the next tab in a dialog box.                                                               | Ctrl+Tab                                     |
+| Switch to the previous tab in a dialog box.                                                           | Ctrl+Shift+Tab                               |
+| Move to the next or previous option or option group.                                                  | Tab key or Shift+Tab                         |
+| Move between options in the selected dropdown list box or move between options in a group of options. | Arrow keys                                   |
+| Perform the action assigned to the selected button or select or clear the checkbox.                   | Spacebar                                     |
+| Open the list if it is closed and move to an option in the list.                                      | First letter of an option in a dropdown list |
+| Select the option, or select or clear the checkbox by the letter underlined in the option name.       | Alt+letter key                               |
+| Open the selected dropdown list box.                                                                  | Alt+Down arrow key                           |
+| Close the selected dropdown list box.                                                                 | Esc                                          |
+| Perform the action assigned to the default button in the dialog box.                                  | Enter                                        |
+| Cancel the command and close the dialog box.                                                          | Esc                                          |
+
+### Use wizards
+
+| To do this                                                                  | Press   |
+|-----------------------------------------------------------------------------|---------|
+| Toggle the focus forward between controls in the wizard.                    | Tab key |
+| Toggle the focus between sections (header, body, and footer) of the wizard. | F6      |
+| Complete the wizard.                                                        | Alt+F   |
+
+### Use property sheets
+
+| To do this                                                                                          | Press                   |
+|-----------------------------------------------------------------------------------------------------|-------------------------|
+| Show or hide the property sheet.                                                                    | F4                      |
+| Move among choices in the control selection dropdown list one item at a time.                       | Down or Up arrow key    |
+| Move among choices in the control selection dropdown list one page at a time.                       | Page down or Page up    |
+| Move to the property sheet tabs from the control selection dropdown list.                           | Tab key                 |
+| Move among the property sheet tabs with a tab selected, but no property selected.                   | Left or Right arrow key |
+| With a property already selected, move down one property on a tab.                                  | Tab key                 |
+| With a property selected, move up one property on a tab, or if already at the top, move to the tab. | Shift+Tab               |
+| Toggle forward between tabs when a property is selected.                                            | Ctrl+Tab                |
+| Toggle backward between tabs when a property is selected.                                           | Ctrl+Shift+Tab          |
+
+## Work with text boxes, combo boxes, and list boxes
+
+### Edit a text box
+
+| To do this                                                          | Press                        |
+|---------------------------------------------------------------------|------------------------------|
+| Move to the beginning of the entry.                                 | Home                         |
+| Move to the end of the entry.                                       | End                          |
+| Move one character to the left or right.                            | Left or Right arrow key      |
+| Move one word to the left or right.                                 | Ctrl+Left or Right arrow key |
+| Select from the insertion point to the beginning of the text entry. | Shift+Home                   |
+| Select from the insertion point to the end of the text entry.       | Shift+End                    |
+| Change the selection by one character to the left.                  | Shift+Left arrow key         |
+| Change the selection by one character to the right.                 | Shift+Right arrow key        |
+| Change the selection by one word to the left.                       | Ctrl+Shift+Left arrow key    |
+| Change the selection by one word to the right.                      | Ctrl+Shift+Right arrow key   |
+
+### Use a combo or list box
+
+| To do this                                                            | Press                    |
+|-----------------------------------------------------------------------|--------------------------|
+| Open a combo box.                                                     | F4 or Alt+Down arrow key |
+| Refresh the contents of the **Lookup field** list box or a combo box. | F9                       |
+| Move down one line.                                                   | Down arrow key           |
+| Move down one page.                                                   | Page down                |
+| Move up one line.                                                     | Up arrow key             |
+| Move up one page.                                                     | Page up                  |
+| Exit the combo box or list box.                                       | Tab key                  |
+
+## Work with objects
+
+### Edit and navigate the Objects list
+
+### Navigate and open objects
+
+| To do this                                                                             | Press      |
+|----------------------------------------------------------------------------------------|------------|
+| Open the selected table or query in the **Datasheet View**.                            | Enter      |
+| Open the selected form or report.                                                      | Enter      |
+| Run the selected macro.                                                                | Enter      |
+| Open the selected table, query, form, report, macro, or module in the **Design View**. | Ctrl+Enter |
+| Display the **Immediate** window in the **Visual Basic Editor**.                       | Ctrl+G     |
+## Common shortcuts for the Design, Layout, and Datasheet views 
+
+## Work in the Datasheet View
+
+### Navigate between fields and records
+| To do this                                        | Press                                                                          |
+|---------------------------------------------------|--------------------------------------------------------------------------------|
+| Move to the next field.                           | Tab key or Right arrow key                                                     |
+| Move to the last field in the current record.     | End                                                                            |
+| Move to the previous field.                       | Shift+Tab or Left arrow key                                                    |
+| Move to the first field in the current record.    | Home                                                                           |
+| Move to the current field in the next record.     | Down arrow key                                                                 |
+| Move to the current field in the last record.     | Ctrl+Down arrow key                                                            |
+| Move to the last field in the last record.        | Ctrl+End                                                                       |
+| Move to the current field in the previous record. | Up arrow key                                                                   |
+| Move to the current field in the first record.    | Ctrl+Up arrow key                                                              |
+| Move to the first field in the first record.      | Ctrl+Home                                                                      |
+| Go to a specific record.                          | Alt+F5, then, in the record number box, type the record number and pressEnter |
+
+### Navigate to another screen of data
+
+| To do this             | Press          |
+|------------------------|----------------|
+| Move up one screen.    | Page up        |
+| Move down one screen.  | Page down      |
+| Move right one screen. | Ctrl+Page down |
+| Move left one screen.  | Ctrl+Page up   |
+
+### Select and move a column
+
+| To do this                                                                             | Press                 |
+|----------------------------------------------------------------------------------------|-----------------------|
+| Select the current column or cancel the column selection, in **Navigation** mode only. | Ctrl+Spacebar         |
+| Extend the selection one column to the right, if the current column is selected.       | Shift+Right arrow key |
+| Extend the selection one column to the left, if the current column is selected.        | Shift+Left arrow key  |
+
+### Work with subdatasheets
+
+## Work in the Design View
+
+### Navigate in the Design View
+
+### Edit using controls in the form and report in the Design View
+
+## Navigate in the Form View
+
+### Navigate between fields and records
+
+| To do this                                                               | Press                                                                          |
+|--------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| Move to the next field.                                                  | Tab key                                                                        |
+| Move to the previous field.                                              | Shift+Tab                                                                      |
+| Move to the last control on the form and remain in the current record.   | End                                                                            |
+| Move to the last control on the form and set focus in the last record.   | Ctrl+End                                                                       |
+| Move to the first control on the form and remain in the current record.  | Home                                                                           |
+| Move to the first control on the form and set focus in the first record. | Ctrl+Home                                                                      |
+| Move to the current field in the next record.                            | Ctrl+Page down                                                                 |
+| Move to the current field in the previous record.                        | Ctrl+Page up                                                                   |
+| Go to a specific record.                                                 | Alt+F5, then, in the record number box, type the record number and press Enter |
+
+### Navigate in forms with more than one page
+
+| To do this                                                                                         | Press     |
+|----------------------------------------------------------------------------------------------------|-----------|
+| Move down one page, or at the end of the record, move to the equivalent page on the next record.   | Page down |
+| Move up one page, or at the end of the record, move to the equivalent page on the previous record. | Page up   |
+
+### Navigate between a main form and a subform
+
+| To do this                                                                           | Press          |
+|--------------------------------------------------------------------------------------|----------------|
+| Enter the subform from the preceding field in the main form.                         | Tab key        |
+| Enter the subform from the following field in the main form.                         | Shift+Tab      |
+| Exit the subform and move to the next field in the master form or next record.       | Ctrl+Tab       |
+| Exit the subform and move to the previous field in the main form or previous record. | Ctrl+Shift+Tab |
+
+## Navigate in the Print Preview and Layout Preview
+
+| To do this                                                          | Press                                              |
+|---------------------------------------------------------------------|----------------------------------------------------|
+| Open the **Print** dialog box (for datasheets, forms, and reports). | Ctrl+P                                             |
+| Open the **Page Setup** dialog box (for forms and reports).         | S                                                  |
+| Cancel **Print Preview** or **Layout Preview**.                     | C or Esc                                           |
+| Scroll down in small increments.                                    | Down arrow key                                     |
+| Scroll down one full screen.                                        | Page down                                          |
+| Move to the bottom of the page.                                     | Ctrl+Down arrow key                                |
+| Scroll up in small increments.                                      | Up arrow key                                       |
+| Scroll up one full screen.                                          | Page up                                            |
+| Move to the top of the page.                                        | Ctrl+Up arrow key                                  |
+| Scroll to the right in small increments.                            | Right arrow key                                    |
+| Move to the right edge of the page.                                 | End                                                |
+| Move to the lower-right corner of the page.                         | Ctrl+End                                           |
+| Scroll to the left in small increments.                             | Left arrow key                                     |
+| Move to the left edge of the page.                                  | Home                                               |
+| Move to the upper-left corner of the page.                          | Ctrl+Home                                          |
+| Move to the page number box.                                        | Alt+F5, then, type the page number and press Enter |
+
+## Work with panes
+
+### Use a diagram pane
+
+| To do this                                                                 | Press                      |
+|----------------------------------------------------------------------------|----------------------------|
+| Move among tables, views, and functions (and join lines, if available).    | Tab key or Shift+Tab       |
+| Move between columns in a table, view, or function.                        | Arrow keys                 |
+| Choose the selected data column for output.                                | Spacebar or Plus sign (+)  |
+| Remove the selected data column from the query output.                     | Spacebar or Minus sign (-) |
+| Remove the selected table, view, or function, or join line from the query. | Delete                     |
+
+### Use a grid pane
+
+### Use an SQL pane
+
+### Use the Field List pane with a form or report in the Design View or Layout View
+
+| To do this                                                    | Press                |
+|---------------------------------------------------------------|----------------------|
+| Show or hide the **Field List** pane.                         | Alt+F8               |
+| Add the selected field to the form or report detail section.  | Enter                |
+| Move up or down the **Field List** pane.                      | Up or Down arrow key |
+| Move between the upper and lower panes of the **Field List**. | Tab key              |
+
+## Select text or data
+
+### Select a field or record
+
+| To do this                                                                                                     | Press              |
+|----------------------------------------------------------------------------------------------------------------|--------------------|
+| Select the next field.                                                                                         | Tab key            |
+| Switch between **Edit** mode (with insertion point displayed) and **Navigation** mode in a datasheet.          | F2                 |
+| Exit **Navigation** mode in a form or report.                                                                  | Esc                |
+| Switch between selecting the current record and the first field of the current record, in **Navigation** mode. | Shift+Spacebar     |
+| Extend the selection to the previous record, if the current record is selected.                                | Shift+Up arrow key |
+| Select all records.                                                                                            | Ctrl+A             |
+
+### Select text in a field
+
+| To do this                                                      | Press                      |
+|-----------------------------------------------------------------|----------------------------|
+| Change the size of the selection by one character to the right. | Shift+Right arrow key      |
+| Change the size of the selection by one word to the right.      | Ctrl+Shift+Right arrow key |
+| Change the size of the selection by one character to the left.  | Shift+Left arrow key       |
+| Change the size of the selection by one word to the left.       | Ctrl+Shift+Left arrow key  |
+
+### Extend a selection
+
+### Find and replace text or data
+
+| To do this                                                                                                                                                              | Press    |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| Open the **Find** tab in the **Find and Replace** dialog box.                                                                                                           | Ctrl+F   |
+| Find the next occurrence of the text specified in the **Find and Replace** dialog box when the dialog box is closed (in the **Datasheet View** and **Form View** only). | Shift+F4 |
+
+## Edit text or data
+
+### Move the insertion point in a field
+
+| To do this                                                                                                                                 | Press                |
+|--------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| Move the insertion point one character to the right.                                                                                       | Right arrow key      |
+| Move the insertion point one word to the right.                                                                                            | Ctrl+Right arrow key |
+| Move the insertion point one character to the left.                                                                                        | Left arrow key       |
+| Move the insertion point one word to the left.                                                                                             | Ctrl+Left arrow key  |
+| Move the insertion point to the end of the field in single-line fields, or move it to the end of the line in multiline fields.             | End                  |
+| Move the insertion point to the end of the field, in multiline fields.                                                                     | Ctrl+End             |
+| Move the insertion point to the beginning of the field in single-line fields, or move it to the beginning of the line in multiline fields. | Home                 |
+| Move the insertion point to the beginning of the field, in multiline fields.                                                               | Ctrl+Home            |
+
+### Copy, move, or delete text
+
+| To do this                                                                 | Press       |
+|----------------------------------------------------------------------------|-------------|
+| Copy the selection to the clipboard.                                       | Ctrl+C      |
+| Cut the selection and copy it to the clipboard.                            | Ctrl+X      |
+| Paste the contents of the clipboard at the insertion point.                | Ctrl+V      |
+| Delete the selection or the character to the left of the insertion point.  | Backspace   |
+| Delete the selection or the character to the right of the insertion point. | Delete      |
+| Delete all characters to the right of the insertion point.                 | Ctrl+Delete |
+
+### Undo changes
+
+### Enter data in the Datasheet View or Form View
+
+| To do this                                                   | Press                |
+|--------------------------------------------------------------|----------------------|
+| Insert the current date.                                     | Ctrl+Semicolon (;)   |
+| Insert the current time.                                     | Ctrl+Shift+Colon (:) |
+| Insert the default value for a field.                        | Ctrl+Alt+Spacebar    |
+| Insert the value from the same field in the previous record. | Ctrl+Apostrophe (')  |
+| Add a new record.                                            | Ctrl+Plus sign (+)   |
+| In a datasheet, delete the current record.                   | Ctrl+Minus sign (-)  |
+| Save changes to the current record.                          | Shift+Enter          |
+| Switch between the values in a checkbox or option button.    | Spacebar             |
+| Insert a new line in a Short Text or Long Text field.        | Ctrl+Enter           |
+
+### Refresh fields with current data
+
+| To do this                                                                                        | Press          |
+|---------------------------------------------------------------------------------------------------|----------------|
+| Requery the underlying tables or in a subform, requery the underlying table only for the subform. | Shift+F9 or F5 |
+| Refresh the contents of a **Lookup field** list or combo box.                                     | F9             |
+
+## Navigate in tables and cells
+
+### Work and move around in tables
+
+| To do this                                | Press                              |
+|-------------------------------------------|------------------------------------|
+| Move to the next cell.                    | Tab key                            |
+| Move to the preceding cell.               | Shift+Tab                          |
+| Move to the next row.                     | Down arrow key                     |
+| Move to the preceding row.                | Up arrow key                       |
+| Insert a tab in a cell.                   | Ctrl+Tab                           |
+| Start a new paragraph.                    | Enter                              |
+| Add a new row at the bottom of the table. | Tab key at the end of the last row |
+
+### Move around in tables or cells
+
+| To do this                           | Press                |
+|--------------------------------------|----------------------|
+| Move one character to the left.      | Left arrow key       |
+| Move one character to the right.     | Right arrow key      |
+| Move up one line.                    | Up arrow key         |
+| Move down one line.                  | Down arrow key       |
+| Move one word to the left.           | Ctrl+Left arrow key  |
+| Move one word to the right.          | Ctrl+Right arrow key |
+| Move to the end of a line.           | End                  |
+| Move to the beginning of a line.     | Home                 |
+| Move up one paragraph.               | Ctrl+Up arrow key    |
+| Move down one paragraph.             | Ctrl+Down arrow key  |
+| Move to the end of a text box.       | Ctrl+End             |
+| Move to the beginning of a text box. | Ctrl+Home            |
+| Repeat the last **Find** action.     | Shift+F4             |
+
+## Get help with Access
+
+## Miscellaneous keyboard shortcuts
+
+| To do this                                                                                   | Press               |
+|----------------------------------------------------------------------------------------------|---------------------|
+| Display the complete hyperlink address (URL) for a selected hyperlink.                       | F2                  |
+| Open the **Zoom** box to conveniently enter expressions and other text in small input areas. | Shift+F2            |
+| Copy a screenshot of the entire screen to the clipboard.                                     | Print screen        |
+| Copy a screenshot of the current window to the clipboard.                                    | Alt+Print screen    |
+| Display the full set of commands on the task pane menu.                                      | Ctrl+Down arrow key |
+| Exit Access.                                                                                 | Alt+F4              |
+
+## Reference links
+
+[Keyboard shortcuts for Access](https://support.microsoft.com/en-gb/office/keyboard-shortcuts-for-access-70a673e4-4f7b-4300-b8e5-3320fa6606e2)
+
+## Tags
+
+#Windows
+
+#Microsoft
+
+#Access 365
+
+#English
