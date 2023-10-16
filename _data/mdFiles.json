@@ -1,14 +1,7 @@
 [
     {
         "Title": "Confluence keyboard shortcuts",
-        "Path": "./",
-        "FullPath": "./testpages/ConfluenceWebEnglish.html",
-        "FileName": "ConfluenceWebEnglish.html",
-        "Tags": "#Web #Atlassian #Confluence"
-    },
-    {
-        "Title": "Confluence keyboard shortcuts",
-        "Path": "Atlassian",
+        "Path": "testpages/Atlassian",
         "FullPath": "./testpages/ConfluenceWebEnglish.html",
         "FileName": "ConfluenceWebEnglish.html",
         "Tags": "#Web #Atlassian #Confluence"
